@@ -15,28 +15,36 @@ The study compares three participant groups:
 - **HC**: healthy control participants  
 
 
-## Analysis overview
+## Analysis Overview
 
-The pipeline performs:
+This pipeline investigates how individual differences in IQ relate to auditory cortex activation in schizophrenia using fMRI data processed with FSL.
 
-1. **Preprocessing** preparation of functional MRI data for statistical analysis  
-2. **First-level analysis** subject-level GLM modeling
-3. **Group-level GLM modeling** using FSL FEAT  
-4. **Covariate modeling** of IQ, age, and sex within the group analysis  
-5. **Extraction of peak activation coordinates** from significant clusters  
-6. **Anatomical labeling** of activation peaks using brain atlases  
-7. **Generation of reproducible tables and figures** for reporting results  
+The analysis consists of the following steps:
+
+1. **Download the dataset**
+   The fMRI dataset is downloaded from OpenNeuro and organized locally for analysis.
+
+2. **Preprocessing and first level analysis**
+   Each subject’s functional MRI data are preprocessed and modeled using FSL FEAT to generate subject level statistical maps.
+
+3. **Second level analysis (group level)**
+   Statistical modeling is performed to compare activation patterns across participant groups (AVH+, AVH−, and HC).
+
+4. **ROI analysis**
+   Mean activation values are extracted from the selected auditory cortex region of interest using the subject level contrast images.
+
+5. **Visualization of IQ–activation relationships**
+   Activation values from the region of interest are combined with behavioral data to visualize and analyze the relationship between IQ and neural activation.
 
 All analyses are performed in standard MNI space.
 
 ## Repository Layout
-#### `preprocessing/`
-
----
 
 #### `first_level/`
 
-- `first_level_design.fsf` — template FSL FEAT design for first-level analysis
+- `fsf_first_level.fsf` — template FSL FEAT design for preprocessing and first level analysis  
+- `run_1stLevel_Analysis.sh` — script to run preprocessing and first level analysis for each subject
+
 ---
 
 #### `second_level/`
@@ -44,7 +52,6 @@ All analyses are performed in standard MNI space.
 - `avh_plus_design.fsf` — FEAT design modeling AVH+ participants  
 - `avh_minus_design.fsf` — FEAT design modeling AVH− participants  
 - `healthy_design.fsf` — FEAT design modeling healthy controls  
-
 
 ---
 
