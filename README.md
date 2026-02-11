@@ -99,6 +99,141 @@ https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html
 
 ### Run with Docker
 
+---
+
+## Downloading the Dataset
+
+The fMRI dataset used in this project is publicly available on OpenNeuro.
+
+Download it from:
+[https://openneuro.org/datasets/ds004302/versions/1.0.0/download](https://openneuro.org/datasets/ds004302/versions/1.0.0/download)
+
+### 1. Download using your browser
+
+1. Open the link above in your web browser.
+2. Navigate to **Download with your browser** and click **Download**.
+3. Choose or create a folder where the dataset will be saved.
+
+After downloading and extracting, your structure should look like:
+
+```
+your_data_folder/
+├── sub-01/
+├── sub-02/
+├── sub-03/
+└── ...
+```
+
+---
+
+### 2. Copy project files into the dataset folder
+
+Clone or download this repository, then copy the following folders into your dataset directory:
+
+```
+timing_files/
+first_level/
+second_level/
+roi_activation/
+```
+
+After copying, the structure should look like:
+
+```
+your_data_folder/
+├── sub-01/
+├── sub-02/
+├── sub-03/
+├── timing_files/
+├── first_level/
+├── second_level/
+└── roi_activation/
+```
+
+The dataset folder will now serve as the working directory for all analyses.
+
+### Notes
+
+* The dataset is large, so the download may take some time depending on your internet speed.
+* Make sure the subject folder names remain in the format `sub-XX`, as the analysis scripts rely on this structure.
+
+---
+
+## First Level Analysis
+
+### 1. Prepare timing files
+
+First level modeling in FSL requires timing files that define when each stimulus condition occurred. These timing files are provided in this repository and should already be located in:
+
+```
+timing_files/
+```
+
+At this stage, your dataset directory should look like:
+
+```
+your_data_folder/
+├── sub-01/
+├── sub-02/
+├── sub-03/
+├── ...
+├── timing_files/
+├── first_level/
+├── second_level/
+└── roi_activation/
+```
+
+---
+
+### 2. Copy timing files into each subject folder
+
+FSL expects timing files to be located inside each subject’s functional directory:
+
+```
+sub-01/func/
+sub-02/func/
+...
+```
+
+Run the following script from the dataset directory:
+
+```bash
+TIMING_ROOT="timing_files"
+
+for subj_dir in sub-*; do
+  func_dir="${subj_dir}/func"
+
+  mkdir -p "$func_dir"
+  cp "${TIMING_ROOT}/"*.txt "$func_dir/"
+
+  echo "Copied timing files -> $func_dir"
+done
+```
+
+---
+
+### 3. Verify timing files
+
+Check one subject:
+
+```bash
+ls sub-01/func
+```
+
+You should see files such as:
+
+```
+sub-01_task-speech_bold.nii.gz
+task_words_events.txt
+task_sentences_events.txt
+task_white-noise_events.txt
+task_reversed_events.txt
+```
+
+These timing files are now ready to be used in the first level FEAT design.
+
+---
+
 ## Citation
 
 > Soler-Vidal, J., et al. (2022). *Brain correlates of speech perception in schizophrenia patients with and without auditory hallucinations*. **PLOS ONE**.
