@@ -1,13 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-# Run from dataset root: ds004302-download
+# Run from dataset root: your_data_folder
 ROOT_DIR="$(pwd)"
 
-TEMPLATE_FSF="${ROOT_DIR}/design_run1.fsf"
+TEMPLATE_FSF="${ROOT_DIR}/first_level/fsf_first_level.fsf"
 if [ ! -f "${TEMPLATE_FSF}" ]; then
   echo "ERROR: Cannot find template FSF at: ${TEMPLATE_FSF}"
-  echo "Put design_run1.fsf in the dataset root and try again."
+  echo "Put fsf_first_level.fsf in the first_level and try again."
   exit 1
 fi
 
@@ -50,7 +50,10 @@ for subj in ${SUBJECTS}; do
     continue
   fi
 
-  # Functional file (adjust if name differs)
+  # Structural path without extension (FSF often stores this without .nii.gz)
+  STRUCT_BASE="${ANAT_DIR}/${subj}_T1w"
+
+  # Functional file
   BOLD="${FUNC_DIR}/${subj}_task-speech_bold.nii.gz"
   if [ ! -f "${BOLD}" ]; then
     echo "WARNING: Missing functional file ${BOLD}, skipping ${subj}."
@@ -81,25 +84,27 @@ for subj in ${SUBJECTS}; do
   cd "${SUBJ_DIR}"
   cp "${TEMPLATE_FSF}" ./design_run1.fsf
 
-  # Replace subject id occurrences (template must contain sub-01 somewhere)
-  sed -i '' "s|sub-01|${subj}|g" design_run1.fsf
+  # Replace subject id occurrences (template must contain SUBJECT_ID placeholder)
+  sed -i '' "s|SUBJECT_ID|${subj}|g" design_run1.fsf
 
-  # Optional: replace root path if your template has hardcoded absolute root
-  # TEMPLATE_ROOT="/Users/katy/Desktop/ds004302-download"
-  # sed -i '' "s|${TEMPLATE_ROOT}|${ROOT_DIR}|g" design_run1.fsf
-
-  # Force the main structural image path in the FSF
+  # Force structural paths in the FSF
   if grep -q 'set fmri(structural)' design_run1.fsf; then
     sed -i '' \
       "s|set fmri(structural).*|set fmri(structural) \"${STRUCT_IMG}\"|g" \
       design_run1.fsf
   else
-    # If your template FSF did not contain this line, append it
     echo "set fmri(structural) \"${STRUCT_IMG}\"" >> design_run1.fsf
   fi
 
+  # Also force highres_files(1) if present (often used by FEAT registration)
+  if grep -q 'set highres_files(1)' design_run1.fsf; then
+    sed -i '' \
+      "s|set highres_files(1).*|set highres_files(1) \"${STRUCT_BASE}\"|g" \
+      design_run1.fsf
+  fi
+
   echo "Structural set to:"
-  grep 'fmri(structural)' design_run1.fsf || true
+  grep -n 'fmri(structural)\|highres_files(1)' design_run1.fsf || true
   echo
 
   echo "===> Running feat for ${subj}"

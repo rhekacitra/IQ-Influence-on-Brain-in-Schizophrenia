@@ -234,6 +234,85 @@ These timing files are now ready to be used in the first level FEAT design.
 
 ---
 
+## Preprocessing and First Level Analysis
+
+Before running this step, make sure the following files are present inside the dataset directory:
+
+```
+first_level/
+├── fsf_first_level.fsf
+└── run_1stLevel_Analysis.sh
+```
+
+These files define the FEAT design and the script used to run preprocessing and first level modeling for each subject.
+
+### Run preprocessing and first level analysis
+
+From the dataset root directory, run:
+
+```bash
+bash first_level/run_1stLevel_Analysis.sh
+```
+
+The script will:
+
+* Check that required files exist for each subject
+* Generate a subject specific FEAT design file
+* Run FEAT preprocessing and first level GLM analysis
+* Save outputs inside each subject’s `func/` directory
+
+Example output location:
+
+```
+sub-01/func/sub-01_task-speech_bold.feat
+```
+
+### Viewing results
+
+After FEAT finishes for a subject, an HTML report is automatically generated.
+This report contains:
+
+* Preprocessing summaries
+* Registration results
+* Model fit diagnostics
+* Statistical maps and thresholded images
+* Log files
+
+You can open the report in a browser by navigating to the `.feat` folder and opening:
+
+```
+report.html
+```
+
+For example:
+
+```
+sub-01/func/sub-01_task-speech_bold.feat/report.html
+```
+
+### Output files for analysis
+
+Inside the `.feat` directory, important statistical outputs can be found in:
+
+```
+stats/
+```
+
+Common files include:
+
+* `cope*.nii.gz` — contrast parameter estimates
+* `zstat*.nii.gz` — z statistic maps
+* `pe*.nii.gz` — parameter estimates for each regressor
+
+These files are used in ROI analysis and higher level modeling.
+
+### Runtime
+
+This step is computationally intensive.
+Running preprocessing and first level analysis for all subjects typically takes **approximately 6 to 7 hours**, depending on CPU speed and system load.
+
+It is recommended to run this step on a machine that can remain active for several hours.
+
 ## Citation
 
 > Soler-Vidal, J., et al. (2022). *Brain correlates of speech perception in schizophrenia patients with and without auditory hallucinations*. **PLOS ONE**.
