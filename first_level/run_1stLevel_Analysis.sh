@@ -7,13 +7,11 @@ ROOT_DIR="$(pwd)"
 TEMPLATE_FSF="${ROOT_DIR}/first_level/fsf_first_level.fsf"
 if [ ! -f "${TEMPLATE_FSF}" ]; then
   echo "ERROR: Cannot find template FSF at: ${TEMPLATE_FSF}"
-  echo "Put fsf_first_level.fsf in the first_level and try again."
+  echo "Put fsf_first_level.fsf in first_level/ and try again."
   exit 1
 fi
 
-# Edit this list
 SUBJECTS="$(ls -d sub-* 2>/dev/null | sort || true)"
-
 if [ -z "${SUBJECTS}" ]; then
   echo "ERROR: No subject IDs provided."
   exit 1
@@ -42,33 +40,29 @@ for subj in ${SUBJECTS}; do
     continue
   fi
 
-  # Structural image you want FEAT to use
   STRUCT_IMG="${ANAT_DIR}/${subj}_T1w.nii.gz"
   if [ ! -f "${STRUCT_IMG}" ]; then
     echo "WARNING: Missing structural image ${STRUCT_IMG}, skipping ${subj}."
     echo
     continue
   fi
-
-  # Structural path without extension (FSF often stores this without .nii.gz)
   STRUCT_BASE="${ANAT_DIR}/${subj}_T1w"
 
-  # Functional file
   BOLD="${FUNC_DIR}/${subj}_task-speech_bold.nii.gz"
   if [ ! -f "${BOLD}" ]; then
     echo "WARNING: Missing functional file ${BOLD}, skipping ${subj}."
     echo
     continue
   fi
+  BOLD_BASE="${FUNC_DIR}/${subj}_task-speech_bold"
 
-  # Timing files
-  EV1="${FUNC_DIR}/task_white-noise_events.txt"
-  EV2="${FUNC_DIR}/task_sentences_events.txt"
-  EV3="${FUNC_DIR}/task_words_events.txt"
-  EV4="${FUNC_DIR}/task_reversed_events.txt"
+  EV_SENT="${FUNC_DIR}/task_sentences_events.txt"
+  EV_WORD="${FUNC_DIR}/task_words_events.txt"
+  EV_REV="${FUNC_DIR}/task_reversed_events.txt"
+  EV_WN="${FUNC_DIR}/task_white-noise_events.txt"  # only used if FSF has custom4
 
   missing_ev=0
-  for ev in "${EV1}" "${EV2}" "${EV3}" "${EV4}"; do
+  for ev in "${EV_SENT}" "${EV_WORD}" "${EV_REV}"; do
     if [ ! -f "${ev}" ]; then
       echo "WARNING: Missing timing file: ${ev}"
       missing_ev=1
@@ -80,31 +74,68 @@ for subj in ${SUBJECTS}; do
     continue
   fi
 
-  # Copy template FSF into subject dir
   cd "${SUBJ_DIR}"
   cp "${TEMPLATE_FSF}" ./design_run1.fsf
 
-  # Replace subject id occurrences (template must contain SUBJECT_ID placeholder)
+  # Replace placeholder if present
   sed -i '' "s|SUBJECT_ID|${subj}|g" design_run1.fsf
 
-  # Force structural paths in the FSF
-  if grep -q 'set fmri(structural)' design_run1.fsf; then
-    sed -i '' \
-      "s|set fmri(structural).*|set fmri(structural) \"${STRUCT_IMG}\"|g" \
-      design_run1.fsf
+  # Force outputdir to be subject-local and deterministic
+  # FEAT interprets relative paths relative to where you run feat (SUBJ_DIR here)
+  OUTDIR_REL="func/${subj}_task-speech_bold.feat"
+  if grep -q '^set fmri(outputdir)' design_run1.fsf; then
+    sed -i '' "s|^set fmri(outputdir).*|set fmri(outputdir) \"${OUTDIR_REL}\"|g" design_run1.fsf
+  else
+    echo "set fmri(outputdir) \"${OUTDIR_REL}\"" >> design_run1.fsf
+  fi
+
+  # Force structural paths
+  if grep -q '^set fmri(structural)' design_run1.fsf; then
+    sed -i '' "s|^set fmri(structural).*|set fmri(structural) \"${STRUCT_IMG}\"|g" design_run1.fsf
   else
     echo "set fmri(structural) \"${STRUCT_IMG}\"" >> design_run1.fsf
   fi
-
-  # Also force highres_files(1) if present (often used by FEAT registration)
-  if grep -q 'set highres_files(1)' design_run1.fsf; then
-    sed -i '' \
-      "s|set highres_files(1).*|set highres_files(1) \"${STRUCT_BASE}\"|g" \
-      design_run1.fsf
+  if grep -q '^set highres_files(1)' design_run1.fsf; then
+    sed -i '' "s|^set highres_files(1).*|set highres_files(1) \"${STRUCT_BASE}\"|g" design_run1.fsf
   fi
 
-  echo "Structural set to:"
-  grep -n 'fmri(structural)\|highres_files(1)' design_run1.fsf || true
+  # Force functional input
+  if grep -q '^set feat_files(1)' design_run1.fsf; then
+    sed -i '' "s|^set feat_files(1).*|set feat_files(1) \"${BOLD_BASE}\"|g" design_run1.fsf
+  else
+    echo "set feat_files(1) \"${BOLD_BASE}\"" >> design_run1.fsf
+  fi
+
+  # Force EV timing files (3-EV setup)
+  if grep -q '^set fmri(custom1)' design_run1.fsf; then
+    sed -i '' "s|^set fmri(custom1).*|set fmri(custom1) \"${EV_SENT}\"|g" design_run1.fsf
+  fi
+  if grep -q '^set fmri(custom2)' design_run1.fsf; then
+    sed -i '' "s|^set fmri(custom2).*|set fmri(custom2) \"${EV_WORD}\"|g" design_run1.fsf
+  fi
+  if grep -q '^set fmri(custom3)' design_run1.fsf; then
+    sed -i '' "s|^set fmri(custom3).*|set fmri(custom3) \"${EV_REV}\"|g" design_run1.fsf
+  fi
+
+  # Optional custom4
+  if grep -q '^set fmri(custom4)' design_run1.fsf; then
+    if [ -f "${EV_WN}" ]; then
+      sed -i '' "s|^set fmri(custom4).*|set fmri(custom4) \"${EV_WN}\"|g" design_run1.fsf
+    fi
+  fi
+
+  # Safety check: fail only if FSF contains some OTHER subject id
+  # This catches the original bug (sub-15 FSF still pointing to sub-01)
+  other_subj_lines="$(grep -nE 'sub-[0-9]{2}' design_run1.fsf | grep -v "${subj}" || true)"
+  if [ -n "${other_subj_lines}" ]; then
+    echo "ERROR: design_run1.fsf contains paths for a different subject. Not running FEAT for ${subj}."
+    echo "${other_subj_lines}"
+    cd "${ROOT_DIR}"
+    exit 1
+  fi
+
+  echo "Key FSF paths for ${subj}:"
+  grep -n '^set fmri(outputdir)\|^set feat_files(1)\|^set fmri(structural)\|^set highres_files(1)\|^set fmri(custom[1-4])' design_run1.fsf || true
   echo
 
   echo "===> Running feat for ${subj}"
