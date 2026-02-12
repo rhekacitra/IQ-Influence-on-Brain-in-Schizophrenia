@@ -131,7 +131,7 @@ your_data_folder/
 └── ...
 ```
 
-** IF YOU ARE CLONING THE DATA FROM THE GIT REPOSITORY ON OPENNEURO: **
+**IF YOU ARE CLONING THE DATA FROM THE GIT REPOSITORY ON OPENNEURO:**
 
 1. Install DataLad on your device.
 2. Navigate to the cloned dataset and run:
@@ -140,7 +140,7 @@ your_data_folder/
 datalad get .
 ```
 
-This step pulls the actual anatomical data from the Github repository for use in the following steps.
+This step pulls the actual anatomical data from the Github repository for use in the following analyses. Otherwise, the script will not be able to accurately locate the anatomical data and produce an error.
 
 ---
 
