@@ -331,6 +331,126 @@ Running preprocessing and first level analysis for all subjects typically takes 
 
 It is recommended to run this step on a machine that can remain active for several hours.
 
+## Preparing Data for Second Level Analysis
+
+Before running group level FEAT, each subject first level output must include a `reg_standard/` directory inside their `.feat` folder.
+
+### Why this step is necessary
+
+First level FEAT writes registration results to `reg/`. Group level FEAT expects standard space versions of key files (including a mask) in `reg_standard/` so it can build a common analysis space across subjects.
+
+If `reg_standard/` or `reg_standard/mask` is missing, group level FEAT can fail during input preparation.
+
+The command `featregapply` generates `reg_standard/` using the existing registration from the first level analysis, so it is safe to run after first level has completed.
+
+---
+
+## Generate reg_standard for all subjects (sub-01 to sub-77)
+
+Run this from the dataset root directory:
+
+```bash
+for d in sub-*/func/sub-*_task-speech_bold.feat; do
+  subj=$(basename "$d" | cut -d'_' -f1)
+
+  if [ ! -f "$d/reg_standard/mask" ] && [ ! -f "$d/reg_standard/mask.nii.gz" ]; then
+    echo "Creating reg_standard for ${subj}"
+    "$FSLDIR/bin/featregapply" "$d"
+  else
+    echo "reg_standard already exists for ${subj}"
+  fi
+done
+````
+
+---
+
+## Verify outputs
+
+Check one subject:
+
+```bash
+ls sub-01/func/sub-01_task-speech_bold.feat/reg_standard
+```
+
+You should see files such as:
+
+```text
+example_func.nii.gz
+mean_func.nii.gz
+stats
+mask.nii.gz
+reg
+```
+
+Once subjects include `reg_standard/`, you are ready to run second level analysis.
+
+## Second Level Analysis
+
+After `reg_standard/` has been created for all subjects, you can run the group level FEAT analyses for each cohort. 
+
+### 1. Healthy Controls
+
+Run from the dataset root:
+
+```bash
+bash second_level/run_2ndLevel_Analysis_HC_01_25.sh
+```
+
+Output:
+
+```
+second_level_output/hc.gfeat
+```
+
+### 2. AVH-
+
+Run from the dataset root:
+
+```bash
+bash second_level/run_2ndLevel_Analysis_AVH-_26_54.sh
+```
+
+Output:
+
+```
+second_level_output/avh-.gfeat
+```
+
+### 3. AVH+
+
+Run from the dataset root:
+
+```bash
+bash second_level/run_2ndLevel_Analysis_AVH+_55_77.sh
+```
+
+Output:
+
+```
+second_level_output/avh+.gfeat
+```
+
+
+## Output
+
+After running all three group analyses, the results will be located in:
+
+```
+second_level_output/
+```
+
+The directory should contain:
+
+```
+second_level_output/
+├── hc.gfeat
+├── avh-.gfeat
+└── avh+.gfeat
+```
+
+Each `.gfeat` directory contains the group level statistical maps, cluster results, and FEAT reports for that cohort.
+
+
 ## Citation
 
 > Soler-Vidal, J., et al. (2022). *Brain correlates of speech perception in schizophrenia patients with and without auditory hallucinations*. **PLOS ONE**.

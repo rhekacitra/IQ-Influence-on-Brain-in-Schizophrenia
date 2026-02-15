@@ -30,7 +30,7 @@ set fmri(featwatcher_yn) 1
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) ""
+set fmri(outputdir) "/Users/katy/desktop/testing_reproc/second_level_output/hc.gfeat"
 
 # TR(s)
 set fmri(tr) 3
@@ -147,7 +147,7 @@ set fmri(robust_yn) 0
 # 0 : Mixed Effects: Simple OLS
 # 2 : Mixed Effects: FLAME 1
 # 1 : Mixed Effects: FLAME 1+2
-set fmri(mixed_yn) 2
+set fmri(mixed_yn) 1
 
 # Higher-level permutations
 set fmri(randomisePermutations) 5000
@@ -294,79 +294,50 @@ set fmri(copeinput.5) 1
 set fmri(copeinput.6) 1
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/Users/katy/desktop/ds004302-download/sub-01/func/sub-01_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (2)
-set feat_files(2) "/Users/katy/desktop/ds004302-download/sub-02/func/sub-02_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (3)
-set feat_files(3) "/Users/katy/desktop/ds004302-download/sub-03/func/sub-03_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (4)
-set feat_files(4) "/Users/katy/desktop/ds004302-download/sub-04/func/sub-04_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (5)
-set feat_files(5) "/Users/katy/desktop/ds004302-download/sub-05/func/sub-05_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (6)
-set feat_files(6) "/Users/katy/desktop/ds004302-download/sub-06/func/sub-06_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (7)
-set feat_files(7) "/Users/katy/desktop/ds004302-download/sub-07/func/sub-07_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (8)
-set feat_files(8) "/Users/katy/desktop/ds004302-download/sub-08/func/sub-08_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (9)
-set feat_files(9) "/Users/katy/desktop/ds004302-download/sub-09/func/sub-09_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (10)
-set feat_files(10) "/Users/katy/desktop/ds004302-download/sub-10/func/sub-10_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (11)
-set feat_files(11) "/Users/katy/desktop/ds004302-download/sub-11/func/sub-11_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (12)
-set feat_files(12) "/Users/katy/desktop/ds004302-download/sub-12/func/sub-12_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (13)
-set feat_files(13) "/Users/katy/desktop/ds004302-download/sub-13/func/sub-13_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (14)
-set feat_files(14) "/Users/katy/desktop/ds004302-download/sub-14/func/sub-14_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (15)
-set feat_files(15) "/Users/katy/desktop/ds004302-download/sub-15/func/sub-15_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (16)
-set feat_files(16) "/Users/katy/desktop/ds004302-download/sub-16/func/sub-16_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (17)
-set feat_files(17) "/Users/katy/desktop/ds004302-download/sub-17/func/sub-17_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (18)
-set feat_files(18) "/Users/katy/desktop/ds004302-download/sub-18/func/sub-18_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (19)
-set feat_files(19) "/Users/katy/desktop/ds004302-download/sub-19/func/sub-19_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (20)
-set feat_files(20) "/Users/katy/desktop/ds004302-download/sub-20/func/sub-20_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (21)
-set feat_files(21) "/Users/katy/desktop/ds004302-download/sub-21/func/sub-21_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (22)
-set feat_files(22) "/Users/katy/desktop/ds004302-download/sub-22/func/sub-22_task-speech_bold+.feat"
 
 # 4D AVW data or FEAT directory (23)
-set feat_files(23) "/Users/katy/desktop/ds004302-download/sub-23/func/sub-23_task-speech_bold+.feat"
-
-# 4D AVW data or FEAT directory (24)
-set feat_files(24) "/Users/katy/desktop/ds004302-download/sub-24/func/sub-24_task-speech_bold+.feat"
-
-# 4D AVW data or FEAT directory (25)
-set feat_files(25) "/Users/katy/desktop/ds004302-download/sub-25/func/sub-25_task-speech_bold+.feat"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
@@ -481,12 +452,6 @@ set fmri(evg22.1) 1.0
 # Higher-level EV value for EV 1 and input 23
 set fmri(evg23.1) 1.0
 
-# Higher-level EV value for EV 1 and input 24
-set fmri(evg24.1) 1.0
-
-# Higher-level EV value for EV 1 and input 25
-set fmri(evg25.1) 1.0
-
 # Setup Orthogonalisation at higher level?
 set fmri(level2orth) 0
 
@@ -559,12 +524,6 @@ set fmri(groupmem.22) 1
 # Group membership for input 23
 set fmri(groupmem.23) 1
 
-# Group membership for input 24
-set fmri(groupmem.24) 1
-
-# Group membership for input 25
-set fmri(groupmem.25) 1
-
 # Contrast & F-tests mode
 # real : control real EVs
 # orig : control original EVs
@@ -603,3 +562,78 @@ set fmri(init_standard) ""
 
 # For full FEAT analysis: overwrite existing .feat output dir?
 set fmri(overwrite_yn) 0
+set feat_files(1) "/Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat"
+set feat_files(2) "/Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat"
+set feat_files(3) "/Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat"
+set feat_files(4) "/Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat"
+set feat_files(5) "/Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat"
+set feat_files(6) "/Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat"
+set feat_files(7) "/Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat"
+set feat_files(8) "/Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat"
+set feat_files(9) "/Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat"
+set feat_files(10) "/Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat"
+set feat_files(11) "/Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat"
+set feat_files(12) "/Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat"
+set feat_files(13) "/Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat"
+set feat_files(14) "/Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat"
+set feat_files(15) "/Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat"
+set feat_files(16) "/Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat"
+set feat_files(17) "/Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat"
+set feat_files(18) "/Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat"
+set feat_files(19) "/Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat"
+set feat_files(20) "/Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat"
+set feat_files(21) "/Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat"
+set feat_files(22) "/Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat"
+set feat_files(23) "/Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat"
+set feat_files(24) "/Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat"
+set feat_files(25) "/Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat"
+set fmri(evg1.1) 1.0
+set fmri(evg2.1) 1.0
+set fmri(evg3.1) 1.0
+set fmri(evg4.1) 1.0
+set fmri(evg5.1) 1.0
+set fmri(evg6.1) 1.0
+set fmri(evg7.1) 1.0
+set fmri(evg8.1) 1.0
+set fmri(evg9.1) 1.0
+set fmri(evg10.1) 1.0
+set fmri(evg11.1) 1.0
+set fmri(evg12.1) 1.0
+set fmri(evg13.1) 1.0
+set fmri(evg14.1) 1.0
+set fmri(evg15.1) 1.0
+set fmri(evg16.1) 1.0
+set fmri(evg17.1) 1.0
+set fmri(evg18.1) 1.0
+set fmri(evg19.1) 1.0
+set fmri(evg20.1) 1.0
+set fmri(evg21.1) 1.0
+set fmri(evg22.1) 1.0
+set fmri(evg23.1) 1.0
+set fmri(evg24.1) 1.0
+set fmri(evg25.1) 1.0
+set fmri(groupmem.1) 1
+set fmri(groupmem.2) 1
+set fmri(groupmem.3) 1
+set fmri(groupmem.4) 1
+set fmri(groupmem.5) 1
+set fmri(groupmem.6) 1
+set fmri(groupmem.7) 1
+set fmri(groupmem.8) 1
+set fmri(groupmem.9) 1
+set fmri(groupmem.10) 1
+set fmri(groupmem.11) 1
+set fmri(groupmem.12) 1
+set fmri(groupmem.13) 1
+set fmri(groupmem.14) 1
+set fmri(groupmem.15) 1
+set fmri(groupmem.16) 1
+set fmri(groupmem.17) 1
+set fmri(groupmem.18) 1
+set fmri(groupmem.19) 1
+set fmri(groupmem.20) 1
+set fmri(groupmem.21) 1
+set fmri(groupmem.22) 1
+set fmri(groupmem.23) 1
+set fmri(groupmem.24) 1
+set fmri(groupmem.25) 1
