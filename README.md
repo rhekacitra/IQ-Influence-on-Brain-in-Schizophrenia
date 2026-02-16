@@ -42,27 +42,38 @@ All analyses are performed in standard MNI space.
 
 #### `first_level/`
 
-- `fsf_first_level.fsf` — template FSL FEAT design for preprocessing and first level analysis  
-- `run_1stLevel_Analysis.sh` — script to run preprocessing and first level analysis for each subject
+* `fsf_first_level.fsf` — template FSL FEAT design for preprocessing and first level analysis
+* `run_1stLevel_Analysis.sh` — script to run preprocessing and first level analysis for each subject
 
 ---
 
 #### `second_level/`
 
-- `avh_plus_design.fsf` — FEAT design modeling AVH+ participants  
-- `avh_minus_design.fsf` — FEAT design modeling AVH− participants  
-- `healthy_design.fsf` — FEAT design modeling healthy controls  
+* `design_run_HC_01_25.fsf` — FEAT design for Healthy Controls group analysis (sub-01 to sub-25)
+* `design_run_AVH-_26_54.fsf` — FEAT design for AVH− group analysis (sub-26 to sub-54)
+* `design_run_AVH+_55_77.fsf` — FEAT design for AVH+ group analysis (sub-55 to sub-77)
+* `run_2ndLevel_Analysis_HC_01_25.sh` — script to run group level FEAT for Healthy Controls
+* `run_2ndLevel_Analysis_AVH-_26_54.sh` — script to run group level FEAT for AVH−
+* `run_2ndLevel_Analysis_AVH+_55_77.sh` — script to run group level FEAT for AVH+
 
 ---
 
-#### `roi_activation/`
+#### `ROI_analysis/`
 
+* `run_roi_all.sh` — script to extract ROI mean activation values for all subjects
+* `masks/` — ROI mask files used for extraction
+
+  * `auditory_cortex.nii.gz` — auditory cortex ROI mask
+  * `heschl.nii.gz` — Heschl’s gyrus ROI mask
 
 ---
 
-#### `results/`
+#### `timing_files/`
 
-- `figures/` — thresholded brain maps and visualization outputs  
+* `task_sentences_events.txt` — timing file for sentences condition
+* `task_words_events.txt` — timing file for words condition
+* `task_reversed_events.txt` — timing file for reversed speech condition
+* `task_white-noise_events.txt` — timing file for white noise condition
 
 ---
 
@@ -101,10 +112,6 @@ fsl
 
 If you are using Linux or Windows, refer to the official website: 
 https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html
-
----
-
-### Run with Docker
 
 ---
 
@@ -152,7 +159,7 @@ Clone or download this repository, then copy the following folders into your dat
 timing_files/
 first_level/
 second_level/
-roi_activation/
+ROI_analysis/
 ```
 
 After copying, the structure should look like:
@@ -165,7 +172,7 @@ your_data_folder/
 ├── timing_files/
 ├── first_level/
 ├── second_level/
-└── roi_activation/
+└── ROI_analysis/
 ```
 
 The dataset folder will now serve as the working directory for all analyses.
@@ -384,8 +391,6 @@ reg
 
 Once subjects include `reg_standard/`, you are ready to run second level analysis.
 
-You can revise that section like this so it clearly tells people to copy the folder and explains why.
-
 ---
 
 ## Second Level Analysis
@@ -524,9 +529,6 @@ cope5.nii.gz
 
 ---
 
-Here is a cleaner version that keeps the focus on the ROI section but reminds readers that the other folders should already be present.
-
----
 
 ## Copy the ROI_analysis folder
 
@@ -537,8 +539,6 @@ ROI_analysis/
 ```
 
 into your dataset root directory.
-
-At this stage, your dataset directory should already contain the **first_level** and **second_level** folders from earlier steps. The ROI_analysis folder is added alongside them.
 
 After copying, your structure should look like:
 
