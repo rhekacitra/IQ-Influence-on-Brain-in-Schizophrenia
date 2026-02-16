@@ -384,9 +384,40 @@ reg
 
 Once subjects include `reg_standard/`, you are ready to run second level analysis.
 
+You can revise that section like this so it clearly tells people to copy the folder and explains why.
+
+---
+
 ## Second Level Analysis
 
-After `reg_standard/` has been created for all subjects, you can run the group level FEAT analyses for each cohort. 
+Before running this step, make sure to copy the **second_level** folder from this repository into your dataset directory.
+
+This folder contains:
+
+* All second level FEAT design files (`.fsf`)
+* All scripts required to run the group level analyses
+
+Your directory should look like:
+
+```
+your_data_folder/
+├── sub-01/
+├── sub-02/
+├── ...
+├── timing_files/
+├── first_level/
+├── second_level/
+│   ├── design_run_HC_01_25.fsf
+│   ├── design_run_AVH-_26_54.fsf
+│   ├── design_run_AVH+_55_77.fsf
+│   ├── run_2ndLevel_Analysis_HC_01_25.sh
+│   ├── run_2ndLevel_Analysis_AVH-_26_54.sh
+│   └── run_2ndLevel_Analysis_AVH+_55_77.sh
+```
+
+After `reg_standard/` has been created for all subjects, you can run the group level FEAT analyses for each cohort.
+
+---
 
 ### 1. Healthy Controls
 
@@ -402,6 +433,8 @@ Output:
 second_level_output/hc.gfeat
 ```
 
+---
+
 ### 2. AVH-
 
 Run from the dataset root:
@@ -415,6 +448,8 @@ Output:
 ```
 second_level_output/avh-.gfeat
 ```
+
+---
 
 ### 3. AVH+
 
@@ -450,6 +485,192 @@ second_level_output/
 
 Each `.gfeat` directory contains the group level statistical maps, cluster results, and FEAT reports for that cohort.
 
+
+Here is a section you can **paste directly into your README** under the Second Level Analysis section. It matches your style and structure.
+
+---
+
+## ROI Analysis
+
+ROI analysis extracts mean activation values from predefined brain regions and evaluates the relationship between activation and IQ.
+
+In this project, ROI analysis is performed for:
+
+* Heschl's gyrus
+* Auditory cortex
+
+The script extracts subject level activation from selected contrasts, merges the values with participant data, and generates scatter plots with regression lines.
+
+---
+
+## Preparing ROI Analysis
+
+Before running this step:
+
+1. Make sure first level analysis has completed for all subjects.
+2. Ensure that each subject contains:
+
+```
+sub-XX/func/sub-XX_task-speech_bold.feat/reg_standard/stats/
+```
+
+which should include files such as:
+
+```
+cope1.nii.gz
+cope3.nii.gz
+cope5.nii.gz
+```
+
+---
+
+Here is a cleaner version that keeps the focus on the ROI section but reminds readers that the other folders should already be present.
+
+---
+
+## Copy the ROI_analysis folder
+
+Download or copy the folder from this repository:
+
+```
+ROI_analysis/
+```
+
+into your dataset root directory.
+
+At this stage, your dataset directory should already contain the **first_level** and **second_level** folders from earlier steps. The ROI_analysis folder is added alongside them.
+
+After copying, your structure should look like:
+
+```
+your_data_folder/
+├── sub-01/
+├── sub-02/
+├── ...
+├── timing_files/
+├── first_level/
+├── second_level/
+└── ROI_analysis/
+    ├── masks/
+    │   ├── heschl.nii.gz
+    │   └── auditory_cortex.nii.gz
+    └── run_heschl_roi_all.sh
+```
+
+Make sure all files inside `ROI_analysis/` are copied, especially the `masks/` directory and the script.
+
+
+## Running ROI Analysis
+
+From the dataset root directory, run:
+
+```bash
+bash ROI_analysis/run_heschl_roi_all.sh
+```
+
+The script will:
+
+1. Extract mean activation values from each ROI
+2. Merge activation values with participant information
+3. Compute regression statistics
+4. Generate plots for each contrast and ROI
+
+---
+
+## Output Structure
+
+After running the script, results will be saved in:
+
+```
+ROI_analysis_output/
+```
+
+Example structure:
+
+```
+ROI_analysis_output/
+├── heschl/
+│   ├── files/
+│   │   ├── roi_activation_heschl_sentences.csv
+│   │   ├── roi_activation_heschl_words.csv
+│   │   ├── roi_activation_heschl_reversed.csv
+│   │   ├── merged_heschl_sentences.csv
+│   │   ├── merged_heschl_words.csv
+│   │   └── merged_heschl_reversed.csv
+│   └── plots/
+│       ├── iq_vs_heschl_sentences.png
+│       ├── iq_vs_heschl_words.png
+│       └── iq_vs_heschl_reversed.png
+│
+└── auditory_cortex/
+    ├── files/
+    ├── plots/
+```
+
+---
+
+## Explanation of Outputs
+
+### Activation files
+
+Files named:
+
+```
+roi_activation_<region>_<contrast>.csv
+```
+
+contain:
+
+* participant ID
+* mean ROI activation value
+
+These values are extracted using:
+
+```
+fslmeants
+```
+
+from the subject level contrast maps.
+
+---
+
+### Merged files
+
+Files named:
+
+```
+merged_<region>_<contrast>.csv
+```
+
+contain:
+
+* participant ID
+* group (HC, AVH+, AVH−)
+* IQ score
+* ROI activation
+
+These files are used for statistical analysis and plotting.
+
+---
+
+### Plots
+
+Each plot shows:
+
+* IQ vs activation
+* Separate regression lines per group
+* Confidence intervals
+* Correlation statistics
+
+Example:
+
+```
+iq_vs_heschl_sentences.png
+```
+
+These figures are suitable for inclusion in reports and presentations.
+
+---
 
 ## Citation
 
