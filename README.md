@@ -554,7 +554,7 @@ your_data_folder/
     ├── masks/
     │   ├── heschl.nii.gz
     │   └── auditory_cortex.nii.gz
-    └── run_heschl_roi_all.sh
+    └── run_roi_all.sh
 ```
 
 Make sure all files inside `ROI_analysis/` are copied, especially the `masks/` directory and the script.
@@ -565,7 +565,7 @@ Make sure all files inside `ROI_analysis/` are copied, especially the `masks/` d
 From the dataset root directory, run:
 
 ```bash
-bash ROI_analysis/run_heschl_roi_all.sh
+bash ROI_analysis/run_roi_all.sh
 ```
 
 The script will:
