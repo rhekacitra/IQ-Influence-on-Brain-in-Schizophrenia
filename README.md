@@ -64,7 +64,7 @@ All analyses are performed in standard MNI space.
 * `masks/` — ROI mask files used for extraction
 
   * `auditory_cortex.nii.gz` — auditory cortex ROI mask
-  * `heschl.nii.gz` — Heschl’s gyrus ROI mask
+  * `right_crus_I.nii.gz` — right crus I gyrus ROI mask
 
 ---
 
@@ -501,7 +501,7 @@ ROI analysis extracts mean activation values from predefined brain regions and e
 
 In this project, ROI analysis is performed for:
 
-* Heschl's gyrus
+* Right Crus I
 * Auditory cortex
 
 The script extracts subject level activation from selected contrasts, merges the values with participant data, and generates scatter plots with regression lines.
@@ -552,7 +552,7 @@ your_data_folder/
 ├── second_level/
 └── ROI_analysis/
     ├── masks/
-    │   ├── heschl.nii.gz
+    │   ├── right_crus_I.nii.gz
     │   └── auditory_cortex.nii.gz
     └── run_roi_all.sh
 ```
@@ -589,18 +589,18 @@ Example structure:
 
 ```
 ROI_analysis_output/
-├── heschl/
+├── right_crus_I/
 │   ├── files/
-│   │   ├── roi_activation_heschl_sentences.csv
-│   │   ├── roi_activation_heschl_words.csv
-│   │   ├── roi_activation_heschl_reversed.csv
-│   │   ├── merged_heschl_sentences.csv
-│   │   ├── merged_heschl_words.csv
-│   │   └── merged_heschl_reversed.csv
+│   │   ├── roi_activation_right_crus_I_sentences.csv
+│   │   ├── roi_activation_right_crus_I_words.csv
+│   │   ├── roi_activation_right_crus_I_reversed.csv
+│   │   ├── merged_right_crus_I_sentences.csv
+│   │   ├── merged_right_crus_I_words.csv
+│   │   └── merged_right_crus_I_reversed.csv
 │   └── plots/
-│       ├── iq_vs_heschl_sentences.png
-│       ├── iq_vs_heschl_words.png
-│       └── iq_vs_heschl_reversed.png
+│       ├── iq_vs_right_crus_I_sentences.png
+│       ├── iq_vs_right_crus_I_words.png
+│       └── iq_vs_right_crus_I_reversed.png
 │
 └── auditory_cortex/
     ├── files/
@@ -665,7 +665,7 @@ Each plot shows:
 Example:
 
 ```
-iq_vs_heschl_sentences.png
+iq_vs_right_crus_I_sentences.png
 ```
 
 These figures are suitable for inclusion in reports and presentations.

@@ -4,7 +4,7 @@ set -euo pipefail
 PARTICIPANTS_TSV="participants.tsv"
 COPES=(1 3 5)
 
-MASKS=("heschl.nii.gz" "auditory_cortex.nii.gz")
+MASKS=("right_crus_I.nii.gz" "auditory_cortex.nii.gz")
 
 if [ ! -f "$PARTICIPANTS_TSV" ]; then
   echo "ERROR: participants.tsv not found"
