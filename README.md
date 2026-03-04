@@ -1,10 +1,7 @@
 # The Influence of IQ on the Brain’s Auditory Cortex Activation in Schizophrenia
 
 Created by:
-
-- Rheka Narwastu:
-- Paige Pagaduan:
-- Katrina Suherman:
+Rheka Narwastu, Paige Pagaduan, Katrina Suherman
 
 This repository contains a reproducible neuroimaging analysis pipeline investigating **how individual differences in intelligence quotient (IQ) relate to auditory cortex activation in individuals with schizophrenia**. The analysis is performed using FSL FEAT group-level fMRI modeling and includes covariate control for age and sex.
 
@@ -100,10 +97,6 @@ curl -Ls https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/releases/getfsl.sh | s
 ```
 fslversion
 ```
-```
-atlasquery --help
-```
-
 
 #### 3. Run FSL in terminal:
 ```
