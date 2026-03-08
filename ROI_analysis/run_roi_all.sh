@@ -4,7 +4,7 @@ set -euo pipefail
 PARTICIPANTS_TSV="participants.tsv"
 COPES=(1 3 5)
 
-MASKS=("right_crus_I.nii.gz" "auditory_cortex.nii.gz")
+MASKS=("heschl.nii.gz" "auditory_cortex.nii.gz")
 
 if [ ! -f "$PARTICIPANTS_TSV" ]; then
   echo "ERROR: participants.tsv not found"
@@ -38,7 +38,7 @@ for MASK_FILE in "${MASKS[@]}"; do
   echo "Processing mask: $MASK_FILE"
 
   # ----------------------------
-  # Part 1: Extract ROI means
+  # Extract ROI means
   # ----------------------------
   for cope in "${COPES[@]}"; do
     label=$(cope_name $cope)
@@ -60,3 +60,4 @@ for MASK_FILE in "${MASKS[@]}"; do
 
     echo "Wrote $out"
   done
+done
