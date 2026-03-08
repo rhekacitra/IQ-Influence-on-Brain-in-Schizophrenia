@@ -779,6 +779,16 @@ This study examined the relationship between IQ and brain activation during spee
 
 However, significant IQ related effects were observed in the cerebellar region right Crus I during the Words contrast in both schizophrenia groups, with opposite directions of association. These findings suggest that cerebellar regions may reflect individual differences in the cognitive processing of speech.
 
+## Evaluation and Reproducibility
+
+Evaluation metrics include linear regression coefficients, Pearson correlation values, and p values derived from ROI activation analyses. Group level statistical maps are generated using FSL FEAT.
+
+All intermediate and final outputs are saved within `second_level_output/` and `ROI_analysis_output/`. The analysis pipeline can be reproduced by running the provided bash scripts for first level analysis, group level analysis, and ROI extraction.
+
+FSL automatically generates log files and HTML reports for each FEAT run, providing model diagnostics and statistical summaries for verification and reproducibility.
+
+Formal unit tests are not included, as this repository represents a neuroimaging analysis pipeline rather than a software library.
+
 ---
 ## Citation
 
