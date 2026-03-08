@@ -3,31 +3,24 @@
 Created by:
 Rheka Narwastu, Paige Pagaduan, Katrina Suherman
 
-This repository contains a reproducible neuroimaging analysis pipeline investigating **how individual differences in intelligence quotient (IQ) relate to auditory cortex activation in individuals with schizophrenia**.
+This repository provides a reproducible neuroimaging analysis pipeline examining the relationship between intelligence quotient (IQ) and brain activation during speech perception in schizophrenia.
 
 Example outputs from the analysis pipeline are included in this repository within the folders `second_level_output/` and `ROI_analysis_output/`, demonstrating the expected structure of generated results.
 
 ## Introduction
 
-Schizophrenia is a chronic psychiatric disorder that affects approximately 1% of the global population and is often associated with difficulties in speech perception. These difficulties have been linked to altered activation in the auditory cortex, a brain region responsible for processing auditory information. In addition to auditory regions, higher cognitive processing has also been associated with cerebellar regions such as right Crus I.
+Schizophrenia affects about 1% of the population and is often associated with difficulties in speech perception. These impairments have been linked to altered activation in the auditory cortex, while higher cognitive processes have also been associated with cerebellar regions such as right Crus I.
 
-Previous neuroimaging studies investigating speech perception in schizophrenia have frequently focused on symptom groups, particularly the presence or absence of auditory verbal hallucinations (AVH). However, hallucination status alone may not fully explain variability in speech related brain responses. Differences in cognitive ability, such as intelligence quotient (IQ), may also contribute to variation in neural activation during speech processing.
+Most neuroimaging studies of speech perception in schizophrenia focus on hallucination status, but this alone may not explain variability in brain activation. The problem addressed in this project is whether differences in cognitive ability, measured by intelligence quotient (IQ), may also contribute to variability in neural responses during speech processing.
 
-This project investigates whether individual differences in IQ are associated with brain activation during speech perception. Using an openly available functional magnetic resonance imaging (fMRI) dataset from OpenNeuro, we analyze neural responses to spoken words, spoken sentences, and reversed speech in three participant groups: healthy controls (HC), schizophrenia patients without hallucinations (AVH−), and schizophrenia patients with hallucinations (AVH+).
-
-The analysis focuses on two regions of interest:
-
-- **Auditory cortex**, which processes speech sounds  
-- **Right Crus I**, a cerebellar region linked to higher cognitive processing
-
-The goal of this study is to examine whether variability in speech related brain activation may be associated with differences in cognitive ability rather than hallucination status alone.
-
+Using an fMRI dataset from OpenNeuro, we analyze responses to spoken words, sentences, and reversed speech in healthy controls (HC), schizophrenia patients without hallucinations (AVH−), and schizophrenia patients with hallucinations (AVH+). The analysis focuses on two regions of interest: the auditory cortex and the cerebellar region right Crus I.
 
 ## Analysis Overview
 
-This pipeline investigates how individual differences in IQ relate to auditory cortex activation in schizophrenia using fMRI data processed with FSL.
-
 The analysis consists of the following steps:
+
+0. **Install required dependencies**
+    Install the required dependencies before running the analysis pipeline; detailed installation instructions are provided below.
 
 1. **Download the dataset**
    The fMRI dataset is downloaded from OpenNeuro and organized locally for analysis.
@@ -69,6 +62,7 @@ All analyses are performed in standard MNI space.
 #### `ROI_analysis/`
 
 * `run_roi_all.sh` — script to extract ROI mean activation values for all subjects
+* `plot_roi.py` — Python script to generate ROI scatter plots and regression lines showing the relationship between IQ and activation
 * `masks/` — ROI mask files used for extraction
 
   * `auditory_cortex.nii.gz` — auditory cortex ROI mask
@@ -133,8 +127,6 @@ fsl
 
 If you are using Linux or Windows, refer to the official website: 
 https://fsl.fmrib.ox.ac.uk/fsl/docs/install/index.html
-
----
 
 ## Downloading the Dataset
 
@@ -202,8 +194,6 @@ The dataset folder will now serve as the working directory for all analyses.
 
 * The dataset is large, so the download may take some time depending on your internet speed.
 * Make sure the subject folder names remain in the format `sub-XX`, as the analysis scripts rely on this structure.
-
----
 
 ## First Level Analysis
 
@@ -277,8 +267,6 @@ task_reversed_events.txt
 ```
 
 These timing files are now ready to be used in the first level FEAT design.
-
----
 
 ## Preprocessing and First Level Analysis
 
@@ -390,8 +378,6 @@ for d in sub-*/func/sub-*_task-speech_bold.feat; do
 done
 ````
 
----
-
 ## Verify outputs
 
 Check one subject:
@@ -411,8 +397,6 @@ reg
 ```
 
 Once subjects include `reg_standard/`, you are ready to run second level analysis.
-
----
 
 ## Second Level Analysis
 
@@ -514,8 +498,6 @@ Each `.gfeat` directory contains the group level statistical maps, cluster resul
 
 Here is a section you can **paste directly into your README** under the Second Level Analysis section. It matches your style and structure.
 
----
-
 ## ROI Analysis
 
 ROI analysis extracts mean activation values from predefined brain regions and evaluates the relationship between activation and IQ.
@@ -528,8 +510,6 @@ In this project, ROI analysis is performed for:
 The analysis is divided into two stages:
 - ROI extraction and data merging (performed using FSL and Bash)
 - Plot generation (performed using Python inside a Docker container)
-
----
 
 ## Preparing ROI Analysis
 
@@ -632,7 +612,6 @@ ROI_analysis_output/
         └── merged_auditory_cortex_reversed.csv
 ```
 
----
 ## Part 2: Generate Plots Using Docker
 The plotting step uses Python and is containerized using Docker to ensure reproducibility across different systems.
 
@@ -675,7 +654,6 @@ This command:
 - runs the plotting script
 - saves the generated figures back to your local directory
 
----
 ## Output Structure
 ```
 ROI_analysis_output/
@@ -773,12 +751,6 @@ This analysis is limited by the available dataset, which includes only a small s
 
 Future work could include larger participant samples to improve statistical power and better assess group level trends. Incorporating additional cognitive assessments may also allow investigation of brain regions involved in broader cognitive processes beyond auditory and language related functions.
 
-## Conclusion
-
-This study examined the relationship between IQ and brain activation during speech perception across healthy controls and schizophrenia groups. Auditory cortex activation was consistent across groups, with no significant association between IQ and auditory cortex activity.
-
-However, significant IQ related effects were observed in the cerebellar region right Crus I during the Words contrast in both schizophrenia groups, with opposite directions of association. These findings suggest that cerebellar regions may reflect individual differences in the cognitive processing of speech.
-
 ## Evaluation and Reproducibility
 
 Evaluation metrics include linear regression coefficients, Pearson correlation values, and p values derived from ROI activation analyses. Group level statistical maps are generated using FSL FEAT.
@@ -789,7 +761,6 @@ FSL automatically generates log files and HTML reports for each FEAT run, provid
 
 Formal unit tests are not included, as this repository represents a neuroimaging analysis pipeline rather than a software library.
 
----
 ## Citation
 
 > Soler-Vidal, J., et al. (2022). *Brain correlates of speech perception in schizophrenia patients with and without auditory hallucinations*. **PLOS ONE**.
