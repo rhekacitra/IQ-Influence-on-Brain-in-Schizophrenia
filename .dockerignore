@@ -1,0 +1,10 @@
+sub-*
+*.nii
+*.nii.gz
+*.feat
+*.gfeat
+ROI_analysis_output
+second_level_output
+.git
+.DS_Store
+__pycache__
