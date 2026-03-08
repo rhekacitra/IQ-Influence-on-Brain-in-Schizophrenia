@@ -497,7 +497,9 @@ In this project, ROI analysis is performed for:
 * Right Crus I
 * Auditory cortex
 
-The script extracts subject level activation from selected contrasts, merges the values with participant data, and generates scatter plots with regression lines.
+The analysis is divided into two stages:
+- ROI extraction and data merging (performed using FSL and Bash)
+- Plot generation (performed using Python inside a Docker container)
 
 ---
 
@@ -522,7 +524,6 @@ cope5.nii.gz
 
 ---
 
-
 ## Copy the ROI_analysis folder
 
 Download or copy the folder from this repository:
@@ -533,7 +534,7 @@ ROI_analysis/
 
 into your dataset root directory.
 
-After copying, your structure should look like:
+After copying, your directory should look like:
 
 ```
 your_data_folder/
@@ -547,26 +548,26 @@ your_data_folder/
     ├── masks/
     │   ├── right_crus_I.nii.gz
     │   └── auditory_cortex.nii.gz
+    ├── plot_roi.py
     └── run_roi_all.sh
 ```
 
-Make sure all files inside `ROI_analysis/` are copied, especially the `masks/` directory and the script.
+Make sure all files inside `ROI_analysis/` are copied, especially the `masks/` directory and both scripts.
 
+---
+## Part 1: Extract ROI Values and Merge with Participant Data
 
-## Running ROI Analysis
+Run the ROI extraction and merging step using:
 
-From the dataset root directory, run:
-
-```bash
+```
 bash ROI_analysis/run_roi_all.sh
 ```
 
 The script will:
 
 1. Extract mean activation values from each ROI
-2. Merge activation values with participant information
-3. Compute regression statistics
-4. Generate plots for each contrast and ROI
+2. Save ROI activation values for each subject
+3. Merge activation values with participant information
 
 ---
 
@@ -580,6 +581,73 @@ ROI_analysis_output/
 
 Example structure:
 
+```
+ROI_analysis_output/
+├── right_crus_I/
+│   └── files/
+│       ├── roi_activation_right_crus_I_sentences.csv
+│       ├── roi_activation_right_crus_I_words.csv
+│       ├── roi_activation_right_crus_I_reversed.csv
+│       ├── merged_right_crus_I_sentences.csv
+│       ├── merged_right_crus_I_words.csv
+│       └── merged_right_crus_I_reversed.csv
+
+│
+└── auditory_cortex/
+    └── files/
+        ├── roi_activation_auditory_cortex_sentences.csv
+        ├── roi_activation_auditory_cortex_words.csv
+        ├── roi_activation_auditory_cortex_reversed.csv
+        ├── merged_auditory_cortex_sentences.csv
+        ├── merged_auditory_cortex_words.csv
+        └── merged_auditory_cortex_reversed.csv
+```
+
+---
+## Part 2: Generate Plots Using Docker
+The plotting step uses Python and is containerized using Docker to ensure reproducibility across different systems.
+
+Before running the Docker container, make sure the following files from this repository are present in your dataset root directory:
+
+```
+Dockerfile
+requirements.txt
+.dockerignore
+```
+You can obtain these files by either cloning or manually copying the files.
+
+By cloning the repository:
+```
+git clone https://github.com/rhekacitra/IQ-Influence-on-Brain-Auditory-Cortex-in-Schizophrenia.git
+```
+Then copy the required files into your dataset directory:
+```
+Dockerfile
+requirements.txt
+.dockerignore
+```
+Build the Docker Image:
+
+```
+docker build -t fmri-roi-plotter .
+```
+This command builds a Docker image that contains:
+
+- Python
+- required Python libraries
+- the plotting script
+
+Run the Docker Container:
+```
+docker run --rm -v "$(pwd)":/app fmri-roi-plotter
+```
+This command:
+- mounts the current dataset directory inside the container
+- runs the plotting script
+- saves the generated figures back to your local directory
+
+---
+## Output Structure
 ```
 ROI_analysis_output/
 ├── right_crus_I/
@@ -597,14 +665,11 @@ ROI_analysis_output/
 │
 └── auditory_cortex/
     ├── files/
-    ├── plots/
+    └── plots/
 ```
-
----
-
 ## Explanation of Outputs
 
-### Activation files
+### ROI Activation Files
 
 Files named:
 
@@ -623,11 +688,11 @@ These values are extracted using:
 fslmeants
 ```
 
-from the subject level contrast maps.
+from the subject-level contrast maps.
 
 ---
 
-### Merged files
+### Merged Data Files
 
 Files named:
 
