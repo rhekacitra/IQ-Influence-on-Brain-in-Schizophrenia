@@ -1,0 +1,27 @@
+Log directory is: stats0088
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0088

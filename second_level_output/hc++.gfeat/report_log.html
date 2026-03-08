@@ -1,0 +1,304 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Sun Feb 15 15:52:24 PST 2026<p>
+Feat main script<br><pre>
+
+/bin/cp /Users/katy/desktop/testing_reproc/second_level/tmp_design_HC_01_25_XXXXXX.fsf design.fsf
+
+/Users/katy/fsl/bin/feat_model design
+
+mkdir .files;cp /Users/katy/fsl/doc/fsl.css .files;cp -r /Users/katy/fsl/doc/images .files/images
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat -gfeatprep
+70405
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -I 1 -flame1
+74692
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 74692 -t ./.flame
+75233
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 75233  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -flame3
+75526
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 75526  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -poststats 1
+75642
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 75642  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -stop
+76167
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -I 2 -flame1
+76426
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 76426 -t ./.flame
+76943
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 76943  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -flame3
+77241
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 77241  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -poststats 1
+77356
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 77356  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -stop
+77887
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -I 3 -flame1
+78153
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 78153 -t ./.flame
+78676
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 78676  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -flame3
+78964
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 78964  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -poststats 1
+79085
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 79085  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -stop
+79610
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -I 4 -flame1
+79871
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 79871 -t ./.flame
+80389
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 80389  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -flame3
+80681
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 80681  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -poststats 1
+80797
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 80797  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -stop
+81321
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -I 5 -flame1
+81580
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 81580 -t ./.flame
+82098
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 82098  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -flame3
+82388
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 82388  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -poststats 1
+82503
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 82503  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -stop
+83028
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -I 6 -flame1
+83287
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 83287 -t ./.flame
+83805
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 83805  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -flame3
+84098
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 84098  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -poststats 1
+84213
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 84213  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -stop
+84739
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 76167,77887,79610,81321,83028,84739  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat -stop
+</pre><hr>Higher-level input files preparation<br><pre>
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat
+
+/Users/katy/fsl/bin/featregapply /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat
+
+/Users/katy/fsl/bin/fslmerge -t bg_image  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/reg/highres /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/reg/highres
+
+/Users/katy/fsl/bin/fslmaths bg_image -inm 1000 -Tmean bg_image -odt float
+
+/Users/katy/fsl/bin/fslmerge -t mask  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/mask /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/mask
+
+mkdir -p inputreg
+
+/Users/katy/fsl/bin/fslmaths ../mask -mul 25 -Tmean masksum -odt short
+
+/Users/katy/fsl/bin/fslmaths masksum -thr 25 -add masksum masksum
+
+/Users/katy/fsl/bin/overlay 0 0 -c ../bg_image -a masksum 0.9 50 masksum_overlay
+
+/Users/katy/fsl/bin/slicer masksum_overlay -S 2 750 masksum_overlay.png
+
+/Users/katy/fsl/bin/fslmaths masksum -mul 0 maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 1 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 2 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 3 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 4 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 5 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 6 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 7 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 8 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 9 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 10 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 11 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 12 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 13 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 14 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 15 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 16 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 17 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 18 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 19 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 20 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 21 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 22 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 23 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 24 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/mask -mul -1 -add 1 -mul 25 -add maskunique maskunique
+
+/Users/katy/fsl/bin/fslmaths masksum -thr 24 -uthr 24 -bin -mul maskunique maskunique
+
+/Users/katy/fsl/bin/overlay 0 0 ../bg_image -a maskunique 0.9 25 maskunique_overlay
+
+/Users/katy/fsl/bin/slicer maskunique_overlay -S 2 750 maskunique_overlay.png
+
+/bin/cp /Users/katy/fsl/etc/luts/ramp.gif .ramp.gif
+
+/Users/katy/fsl/bin/fslmaths mask -Tmin mask
+
+/Users/katy/fsl/bin/fslmerge -t mean_func  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/mean_func /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/mean_func
+
+/Users/katy/fsl/bin/fslmaths mean_func -Tmean mean_func
+
+/Users/katy/fsl/bin/fslmerge -t cope1  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/cope1 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/cope1
+
+/Users/katy/fsl/bin/fslmaths cope1 -mas mask cope1
+
+printf '1.2763265199999998 ' >> design.lcon
+
+/Users/katy/fsl/bin/fslmerge -t varcope1  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/varcope1 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/varcope1
+
+/Users/katy/fsl/bin/fslmaths varcope1 -mas mask varcope1
+
+/Users/katy/fsl/bin/fslmerge -t cope2  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/cope2 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/cope2
+
+/Users/katy/fsl/bin/fslmaths cope2 -mas mask cope2
+
+printf '1.2763265199999998 ' >> design.lcon
+
+/Users/katy/fsl/bin/fslmerge -t varcope2  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/varcope2 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/varcope2
+
+/Users/katy/fsl/bin/fslmaths varcope2 -mas mask varcope2
+
+/Users/katy/fsl/bin/fslmerge -t cope3  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/cope3 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/cope3
+
+/Users/katy/fsl/bin/fslmaths cope3 -mas mask cope3
+
+printf '1.26018664 ' >> design.lcon
+
+/Users/katy/fsl/bin/fslmerge -t varcope3  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/varcope3 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/varcope3
+
+/Users/katy/fsl/bin/fslmaths varcope3 -mas mask varcope3
+
+/Users/katy/fsl/bin/fslmerge -t cope4  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/cope4 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/cope4
+
+/Users/katy/fsl/bin/fslmaths cope4 -mas mask cope4
+
+printf '1.26018664 ' >> design.lcon
+
+/Users/katy/fsl/bin/fslmerge -t varcope4  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/varcope4 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/varcope4
+
+/Users/katy/fsl/bin/fslmaths varcope4 -mas mask varcope4
+
+/Users/katy/fsl/bin/fslmerge -t cope5  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/cope5 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/cope5
+
+/Users/katy/fsl/bin/fslmaths cope5 -mas mask cope5
+
+printf '1.28252016 ' >> design.lcon
+
+/Users/katy/fsl/bin/fslmerge -t varcope5  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/varcope5 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/varcope5
+
+/Users/katy/fsl/bin/fslmaths varcope5 -mas mask varcope5
+
+/Users/katy/fsl/bin/fslmerge -t cope6  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/cope6 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/cope6
+
+/Users/katy/fsl/bin/fslmaths cope6 -mas mask cope6
+
+printf '1.28252016 ' >> design.lcon
+
+/Users/katy/fsl/bin/fslmerge -t varcope6  /Users/katy/desktop/testing_reproc/sub-01/func/sub-01_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-02/func/sub-02_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-03/func/sub-03_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-04/func/sub-04_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-05/func/sub-05_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-06/func/sub-06_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-07/func/sub-07_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-08/func/sub-08_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-09/func/sub-09_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-10/func/sub-10_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-11/func/sub-11_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-12/func/sub-12_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-13/func/sub-13_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-14/func/sub-14_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-15/func/sub-15_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-16/func/sub-16_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-17/func/sub-17_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-18/func/sub-18_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-19/func/sub-19_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-20/func/sub-20_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-21/func/sub-21_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-22/func/sub-22_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-23/func/sub-23_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-24/func/sub-24_task-speech_bold.feat/reg_standard/stats/varcope6 /Users/katy/desktop/testing_reproc/sub-25/func/sub-25_task-speech_bold.feat/reg_standard/stats/varcope6
+
+/Users/katy/fsl/bin/fslmaths varcope6 -mas mask varcope6
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

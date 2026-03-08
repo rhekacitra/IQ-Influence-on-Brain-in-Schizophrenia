@@ -1,0 +1,2677 @@
+<HTML><HEAD>
+<!--refreshstart-->
+
+<!--refreshstop-->
+<link REL=stylesheet TYPE=text/css href=.files/fsl.css>
+<TITLE>FSL</TITLE></HEAD><BODY><OBJECT data=report.html></OBJECT>
+<h2>Progress Report / Log</h2>
+Started at Sun Feb 15 15:31:28 PST 2026<p>
+<pre>
+
+cp -r ../.files .files
+</pre><hr>Higher-level stats<br><pre>
+
+cat ../design.lcon | awk '{ print  }' > design.lcon
+
+/Users/katy/fsl/bin/fslsplit mask tmpmask -z
+
+/Users/katy/fsl/bin/fslsplit filtered_func_data tmpcope -z
+
+/Users/katy/fsl/bin/fslsplit var_filtered_func_data tmpvarcope -z
+/Users/katy/fsl/bin/flameo --cope=tmpcope0000 --vc=tmpvarcope0000  --mask=tmpmask0000 --ld=stats0000 --dm=design.mat --cs=design.grp --tc=design.con  --runmode=flame12 --nj=10000 --bi=500 --se=1 --fm --zlt=2.25 --zut=2.65
+Log directory is: stats0000
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0000
+Log directory is: stats0009
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0009, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=840
+Running:
+840
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+12
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=12
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12
+Saving results
+
+Log directory was: stats0009
+Log directory is: stats0010
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0010, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1275
+Running:
+1275
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+12
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=12
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12
+Saving results
+
+Log directory was: stats0010
+Log directory is: stats0011
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0011, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1553
+Running:
+1553
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+28
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=28
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+Saving results
+
+Log directory was: stats0011
+Log directory is: stats0012
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0012, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1659
+Running:
+1659
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+29
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=29
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+Saving results
+
+Log directory was: stats0012
+Log directory is: stats0013
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0013, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1798
+Running:
+1798
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+26
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=26
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+Saving results
+
+Log directory was: stats0013
+Log directory is: stats0014
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0014, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1888
+Running:
+1888
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+14
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=14
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+Saving results
+
+Log directory was: stats0014
+Log directory is: stats0015
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0015, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2045
+Running:
+2045
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+15
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=15
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+Saving results
+
+Log directory was: stats0015
+Log directory is: stats0016
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0016, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2169
+Running:
+2169
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+17
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=17
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+Saving results
+
+Log directory was: stats0016
+Log directory is: stats0017
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0017, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2323
+Running:
+2323
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+11
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=11
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11
+Saving results
+
+Log directory was: stats0017
+Log directory is: stats0018
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0018, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2528
+Running:
+2528
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+4
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=4
+Percentage done:
+ 1 2 3 4
+Saving results
+
+Log directory was: stats0018
+Log directory is: stats0001
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0001
+Log directory is: stats0019
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0019, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2718
+Running:
+2718
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+3
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=3
+Percentage done:
+ 1 2 3
+Saving results
+
+Log directory was: stats0019
+Log directory is: stats0020
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0020, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2925
+Running:
+2925
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+4
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=4
+Percentage done:
+ 1 2 3 4
+Saving results
+
+Log directory was: stats0020
+Log directory is: stats0021
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0021, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3232
+Running:
+3232
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0021
+Log directory is: stats0022
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0022, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3761
+Running:
+3761
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+8
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=8
+Percentage done:
+ 1 2 3 4 5 6 7 8
+Saving results
+
+Log directory was: stats0022
+Log directory is: stats0023
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0023, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4191
+Running:
+4191
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+11
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=11
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11
+Saving results
+
+Log directory was: stats0023
+Log directory is: stats0024
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0024, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4483
+Running:
+4483
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+24
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=24
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Saving results
+
+Log directory was: stats0024
+Log directory is: stats0025
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0025, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4677
+Running:
+4677
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+33
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=33
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+Saving results
+
+Log directory was: stats0025
+Log directory is: stats0026
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0026, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4824
+Running:
+4824
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+47
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=47
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+Saving results
+
+Log directory was: stats0026
+Log directory is: stats0027
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0027, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4948
+Running:
+4948
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+78
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=78
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78
+Saving results
+
+Log directory was: stats0027
+Log directory is: stats0028
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0028, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5034
+Running:
+5034
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+90
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=90
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+Saving results
+
+Log directory was: stats0028
+Log directory is: stats0002
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0002
+Log directory is: stats0029
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0029, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5119
+Running:
+5119
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+85
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=85
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85
+Saving results
+
+Log directory was: stats0029
+Log directory is: stats0030
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0030, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5219
+Running:
+5219
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+54
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=54
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54
+Saving results
+
+Log directory was: stats0030
+Log directory is: stats0031
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0031, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5296
+Running:
+5296
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+66
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=66
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+Saving results
+
+Log directory was: stats0031
+Log directory is: stats0032
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0032, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5360
+Running:
+5360
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+55
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=55
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55
+Saving results
+
+Log directory was: stats0032
+Log directory is: stats0033
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0033, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5410
+Running:
+5410
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+35
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=35
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35
+Saving results
+
+Log directory was: stats0033
+Log directory is: stats0034
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0034, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5434
+Running:
+5434
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+78
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=78
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78
+Saving results
+
+Log directory was: stats0034
+Log directory is: stats0035
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0035, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5446
+Running:
+5446
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+89
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=89
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89
+Saving results
+
+Log directory was: stats0035
+Log directory is: stats0036
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0036, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5458
+Running:
+5458
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+84
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=84
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84
+Saving results
+
+Log directory was: stats0036
+Log directory is: stats0037
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0037, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5415
+Running:
+5415
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+97
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=97
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97
+Saving results
+
+Log directory was: stats0037
+Log directory is: stats0038
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0038, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5406
+Running:
+5406
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+101
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=101
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0038
+Log directory is: stats0003
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0003
+Log directory is: stats0039
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0039, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5391
+Running:
+5391
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+109
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=109
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0039
+Log directory is: stats0040
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0040, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5386
+Running:
+5386
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+136
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=136
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0040
+Log directory is: stats0041
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0041, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5332
+Running:
+5332
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+133
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=133
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0041
+Log directory is: stats0042
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0042, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5297
+Running:
+5297
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+147
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=147
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0042
+Log directory is: stats0043
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0043, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5249
+Running:
+5249
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+146
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=146
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0043
+Log directory is: stats0044
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0044, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5195
+Running:
+5195
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+154
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=154
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0044
+Log directory is: stats0045
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0045, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5140
+Running:
+5140
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+186
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=186
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0045
+Log directory is: stats0046
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0046, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=5060
+Running:
+5060
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+210
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=210
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0046
+Log directory is: stats0047
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0047, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4995
+Running:
+4995
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+156
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=156
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0047
+Log directory is: stats0048
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0048, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4934
+Running:
+4934
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+110
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=110
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0048
+Log directory is: stats0004
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0004
+Log directory is: stats0049
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0049, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4868
+Running:
+4868
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+128
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=128
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0049
+Log directory is: stats0050
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0050, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4795
+Running:
+4795
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+155
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=155
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0050
+Log directory is: stats0051
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0051, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4709
+Running:
+4709
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+164
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=164
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0051
+Log directory is: stats0052
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0052, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4618
+Running:
+4618
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+197
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=197
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0052
+Log directory is: stats0053
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0053, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4523
+Running:
+4523
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+166
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=166
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0053
+Log directory is: stats0054
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0054, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4414
+Running:
+4414
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+131
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=131
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0054
+Log directory is: stats0055
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0055, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4291
+Running:
+4291
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+104
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=104
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+Saving results
+
+Log directory was: stats0055
+Log directory is: stats0056
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0056, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4179
+Running:
+4179
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+95
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=95
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95
+Saving results
+
+Log directory was: stats0056
+Log directory is: stats0057
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0057, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=4048
+Running:
+4048
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+75
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=75
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75
+Saving results
+
+Log directory was: stats0057
+Log directory is: stats0058
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0058, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3923
+Running:
+3923
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+80
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=80
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80
+Saving results
+
+Log directory was: stats0058
+Log directory is: stats0005
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0005, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=19
+Running:
+19
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0005
+Log directory is: stats0059
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0059, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3797
+Running:
+3797
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+59
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=59
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59
+Saving results
+
+Log directory was: stats0059
+Log directory is: stats0060
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0060, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3633
+Running:
+3633
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+82
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=82
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82
+Saving results
+
+Log directory was: stats0060
+Log directory is: stats0061
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0061, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3500
+Running:
+3500
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+75
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=75
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75
+Saving results
+
+Log directory was: stats0061
+Log directory is: stats0062
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0062, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3331
+Running:
+3331
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+46
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=46
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+Saving results
+
+Log directory was: stats0062
+Log directory is: stats0063
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0063, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=3149
+Running:
+3149
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+12
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=12
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11 12
+Saving results
+
+Log directory was: stats0063
+Log directory is: stats0064
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0064, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2979
+Running:
+2979
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+10
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=10
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10
+Saving results
+
+Log directory was: stats0064
+Log directory is: stats0065
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0065, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2764
+Running:
+2764
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+10
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=10
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10
+Saving results
+
+Log directory was: stats0065
+Log directory is: stats0066
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0066, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2524
+Running:
+2524
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+4
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=4
+Percentage done:
+ 1 2 3 4
+Saving results
+
+Log directory was: stats0066
+Log directory is: stats0067
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0067, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2286
+Running:
+2286
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+3
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=3
+Percentage done:
+ 1 2 3
+Saving results
+
+Log directory was: stats0067
+Log directory is: stats0068
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0068, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=2033
+Running:
+2033
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+9
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=9
+Percentage done:
+ 1 2 3 4 5 6 7 8 9
+Saving results
+
+Log directory was: stats0068
+Log directory is: stats0006
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0006, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=113
+Running:
+113
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0006
+Log directory is: stats0069
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0069, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1774
+Running:
+1774
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+3
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=3
+Percentage done:
+ 1 2 3
+Saving results
+
+Log directory was: stats0069
+Log directory is: stats0070
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0070, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1534
+Running:
+1534
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+1
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=1
+Percentage done:
+ 1
+Saving results
+
+Log directory was: stats0070
+Log directory is: stats0071
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0071, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1286
+Running:
+1286
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0071
+Log directory is: stats0072
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0072, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1025
+Running:
+1025
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0072
+Log directory is: stats0073
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0073, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=780
+Running:
+780
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0073
+Log directory is: stats0074
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0074, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=533
+Running:
+533
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0074
+Log directory is: stats0075
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0075, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=323
+Running:
+323
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0075
+Log directory is: stats0076
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0076, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=118
+Running:
+118
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0076
+Log directory is: stats0077
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0077, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=1
+Running:
+1
+ 1
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0077
+Log directory is: stats0078
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0078
+Log directory is: stats0007
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0007, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=271
+Running:
+271
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0007
+Log directory is: stats0079
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0079
+Log directory is: stats0080
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0080
+Log directory is: stats0081
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0081
+Log directory is: stats0082
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0082
+Log directory is: stats0083
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0083
+Log directory is: stats0084
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0084
+Log directory is: stats0085
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0085
+Log directory is: stats0086
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0086
+Log directory is: stats0087
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0087
+Log directory is: stats0088
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0088
+Log directory is: stats0008
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+
+WARNING: The passed in varcope file, tmpvarcope0008, contains voxels inside the mask with zero (or negative) values. These voxels will be excluded from the analysis.
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=504
+Running:
+504
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+11
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=11
+Percentage done:
+ 1 2 3 4 5 6 7 8 9 10 11
+Saving results
+
+Log directory was: stats0008
+Log directory is: stats0089
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0089
+Log directory is: stats0090
+Setting up:
+ntptsing=23.000000 
+
+1.000000 
+
+No f contrasts
+nevs=1
+ntpts=23
+ngs=1
+nvoxels=0
+Running:
+0
+
+0
+njumps = 10000
+burnin = 500
+sampleevery = 1
+nsamples = 9500
+
+Metropolis Hasting Sampling
+Number of voxels=0
+Percentage done:
+
+Saving results
+
+Log directory was: stats0090
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/cope1.nii.gz stats0000/cope1 stats0001/cope1 stats0002/cope1 stats0003/cope1 stats0004/cope1 stats0005/cope1 stats0006/cope1 stats0007/cope1 stats0008/cope1 stats0009/cope1 stats0010/cope1 stats0011/cope1 stats0012/cope1 stats0013/cope1 stats0014/cope1 stats0015/cope1 stats0016/cope1 stats0017/cope1 stats0018/cope1 stats0019/cope1 stats0020/cope1 stats0021/cope1 stats0022/cope1 stats0023/cope1 stats0024/cope1 stats0025/cope1 stats0026/cope1 stats0027/cope1 stats0028/cope1 stats0029/cope1 stats0030/cope1 stats0031/cope1 stats0032/cope1 stats0033/cope1 stats0034/cope1 stats0035/cope1 stats0036/cope1 stats0037/cope1 stats0038/cope1 stats0039/cope1 stats0040/cope1 stats0041/cope1 stats0042/cope1 stats0043/cope1 stats0044/cope1 stats0045/cope1 stats0046/cope1 stats0047/cope1 stats0048/cope1 stats0049/cope1 stats0050/cope1 stats0051/cope1 stats0052/cope1 stats0053/cope1 stats0054/cope1 stats0055/cope1 stats0056/cope1 stats0057/cope1 stats0058/cope1 stats0059/cope1 stats0060/cope1 stats0061/cope1 stats0062/cope1 stats0063/cope1 stats0064/cope1 stats0065/cope1 stats0066/cope1 stats0067/cope1 stats0068/cope1 stats0069/cope1 stats0070/cope1 stats0071/cope1 stats0072/cope1 stats0073/cope1 stats0074/cope1 stats0075/cope1 stats0076/cope1 stats0077/cope1 stats0078/cope1 stats0079/cope1 stats0080/cope1 stats0081/cope1 stats0082/cope1 stats0083/cope1 stats0084/cope1 stats0085/cope1 stats0086/cope1 stats0087/cope1 stats0088/cope1 stats0089/cope1 stats0090/cope1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/mask.nii.gz stats0000/mask stats0001/mask stats0002/mask stats0003/mask stats0004/mask stats0005/mask stats0006/mask stats0007/mask stats0008/mask stats0009/mask stats0010/mask stats0011/mask stats0012/mask stats0013/mask stats0014/mask stats0015/mask stats0016/mask stats0017/mask stats0018/mask stats0019/mask stats0020/mask stats0021/mask stats0022/mask stats0023/mask stats0024/mask stats0025/mask stats0026/mask stats0027/mask stats0028/mask stats0029/mask stats0030/mask stats0031/mask stats0032/mask stats0033/mask stats0034/mask stats0035/mask stats0036/mask stats0037/mask stats0038/mask stats0039/mask stats0040/mask stats0041/mask stats0042/mask stats0043/mask stats0044/mask stats0045/mask stats0046/mask stats0047/mask stats0048/mask stats0049/mask stats0050/mask stats0051/mask stats0052/mask stats0053/mask stats0054/mask stats0055/mask stats0056/mask stats0057/mask stats0058/mask stats0059/mask stats0060/mask stats0061/mask stats0062/mask stats0063/mask stats0064/mask stats0065/mask stats0066/mask stats0067/mask stats0068/mask stats0069/mask stats0070/mask stats0071/mask stats0072/mask stats0073/mask stats0074/mask stats0075/mask stats0076/mask stats0077/mask stats0078/mask stats0079/mask stats0080/mask stats0081/mask stats0082/mask stats0083/mask stats0084/mask stats0085/mask stats0086/mask stats0087/mask stats0088/mask stats0089/mask stats0090/mask
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/mean_random_effects_var1.nii.gz stats0000/mean_random_effects_var1 stats0001/mean_random_effects_var1 stats0002/mean_random_effects_var1 stats0003/mean_random_effects_var1 stats0004/mean_random_effects_var1 stats0005/mean_random_effects_var1 stats0006/mean_random_effects_var1 stats0007/mean_random_effects_var1 stats0008/mean_random_effects_var1 stats0009/mean_random_effects_var1 stats0010/mean_random_effects_var1 stats0011/mean_random_effects_var1 stats0012/mean_random_effects_var1 stats0013/mean_random_effects_var1 stats0014/mean_random_effects_var1 stats0015/mean_random_effects_var1 stats0016/mean_random_effects_var1 stats0017/mean_random_effects_var1 stats0018/mean_random_effects_var1 stats0019/mean_random_effects_var1 stats0020/mean_random_effects_var1 stats0021/mean_random_effects_var1 stats0022/mean_random_effects_var1 stats0023/mean_random_effects_var1 stats0024/mean_random_effects_var1 stats0025/mean_random_effects_var1 stats0026/mean_random_effects_var1 stats0027/mean_random_effects_var1 stats0028/mean_random_effects_var1 stats0029/mean_random_effects_var1 stats0030/mean_random_effects_var1 stats0031/mean_random_effects_var1 stats0032/mean_random_effects_var1 stats0033/mean_random_effects_var1 stats0034/mean_random_effects_var1 stats0035/mean_random_effects_var1 stats0036/mean_random_effects_var1 stats0037/mean_random_effects_var1 stats0038/mean_random_effects_var1 stats0039/mean_random_effects_var1 stats0040/mean_random_effects_var1 stats0041/mean_random_effects_var1 stats0042/mean_random_effects_var1 stats0043/mean_random_effects_var1 stats0044/mean_random_effects_var1 stats0045/mean_random_effects_var1 stats0046/mean_random_effects_var1 stats0047/mean_random_effects_var1 stats0048/mean_random_effects_var1 stats0049/mean_random_effects_var1 stats0050/mean_random_effects_var1 stats0051/mean_random_effects_var1 stats0052/mean_random_effects_var1 stats0053/mean_random_effects_var1 stats0054/mean_random_effects_var1 stats0055/mean_random_effects_var1 stats0056/mean_random_effects_var1 stats0057/mean_random_effects_var1 stats0058/mean_random_effects_var1 stats0059/mean_random_effects_var1 stats0060/mean_random_effects_var1 stats0061/mean_random_effects_var1 stats0062/mean_random_effects_var1 stats0063/mean_random_effects_var1 stats0064/mean_random_effects_var1 stats0065/mean_random_effects_var1 stats0066/mean_random_effects_var1 stats0067/mean_random_effects_var1 stats0068/mean_random_effects_var1 stats0069/mean_random_effects_var1 stats0070/mean_random_effects_var1 stats0071/mean_random_effects_var1 stats0072/mean_random_effects_var1 stats0073/mean_random_effects_var1 stats0074/mean_random_effects_var1 stats0075/mean_random_effects_var1 stats0076/mean_random_effects_var1 stats0077/mean_random_effects_var1 stats0078/mean_random_effects_var1 stats0079/mean_random_effects_var1 stats0080/mean_random_effects_var1 stats0081/mean_random_effects_var1 stats0082/mean_random_effects_var1 stats0083/mean_random_effects_var1 stats0084/mean_random_effects_var1 stats0085/mean_random_effects_var1 stats0086/mean_random_effects_var1 stats0087/mean_random_effects_var1 stats0088/mean_random_effects_var1 stats0089/mean_random_effects_var1 stats0090/mean_random_effects_var1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/pe1.nii.gz stats0000/pe1 stats0001/pe1 stats0002/pe1 stats0003/pe1 stats0004/pe1 stats0005/pe1 stats0006/pe1 stats0007/pe1 stats0008/pe1 stats0009/pe1 stats0010/pe1 stats0011/pe1 stats0012/pe1 stats0013/pe1 stats0014/pe1 stats0015/pe1 stats0016/pe1 stats0017/pe1 stats0018/pe1 stats0019/pe1 stats0020/pe1 stats0021/pe1 stats0022/pe1 stats0023/pe1 stats0024/pe1 stats0025/pe1 stats0026/pe1 stats0027/pe1 stats0028/pe1 stats0029/pe1 stats0030/pe1 stats0031/pe1 stats0032/pe1 stats0033/pe1 stats0034/pe1 stats0035/pe1 stats0036/pe1 stats0037/pe1 stats0038/pe1 stats0039/pe1 stats0040/pe1 stats0041/pe1 stats0042/pe1 stats0043/pe1 stats0044/pe1 stats0045/pe1 stats0046/pe1 stats0047/pe1 stats0048/pe1 stats0049/pe1 stats0050/pe1 stats0051/pe1 stats0052/pe1 stats0053/pe1 stats0054/pe1 stats0055/pe1 stats0056/pe1 stats0057/pe1 stats0058/pe1 stats0059/pe1 stats0060/pe1 stats0061/pe1 stats0062/pe1 stats0063/pe1 stats0064/pe1 stats0065/pe1 stats0066/pe1 stats0067/pe1 stats0068/pe1 stats0069/pe1 stats0070/pe1 stats0071/pe1 stats0072/pe1 stats0073/pe1 stats0074/pe1 stats0075/pe1 stats0076/pe1 stats0077/pe1 stats0078/pe1 stats0079/pe1 stats0080/pe1 stats0081/pe1 stats0082/pe1 stats0083/pe1 stats0084/pe1 stats0085/pe1 stats0086/pe1 stats0087/pe1 stats0088/pe1 stats0089/pe1 stats0090/pe1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/res4d.nii.gz stats0000/res4d stats0001/res4d stats0002/res4d stats0003/res4d stats0004/res4d stats0005/res4d stats0006/res4d stats0007/res4d stats0008/res4d stats0009/res4d stats0010/res4d stats0011/res4d stats0012/res4d stats0013/res4d stats0014/res4d stats0015/res4d stats0016/res4d stats0017/res4d stats0018/res4d stats0019/res4d stats0020/res4d stats0021/res4d stats0022/res4d stats0023/res4d stats0024/res4d stats0025/res4d stats0026/res4d stats0027/res4d stats0028/res4d stats0029/res4d stats0030/res4d stats0031/res4d stats0032/res4d stats0033/res4d stats0034/res4d stats0035/res4d stats0036/res4d stats0037/res4d stats0038/res4d stats0039/res4d stats0040/res4d stats0041/res4d stats0042/res4d stats0043/res4d stats0044/res4d stats0045/res4d stats0046/res4d stats0047/res4d stats0048/res4d stats0049/res4d stats0050/res4d stats0051/res4d stats0052/res4d stats0053/res4d stats0054/res4d stats0055/res4d stats0056/res4d stats0057/res4d stats0058/res4d stats0059/res4d stats0060/res4d stats0061/res4d stats0062/res4d stats0063/res4d stats0064/res4d stats0065/res4d stats0066/res4d stats0067/res4d stats0068/res4d stats0069/res4d stats0070/res4d stats0071/res4d stats0072/res4d stats0073/res4d stats0074/res4d stats0075/res4d stats0076/res4d stats0077/res4d stats0078/res4d stats0079/res4d stats0080/res4d stats0081/res4d stats0082/res4d stats0083/res4d stats0084/res4d stats0085/res4d stats0086/res4d stats0087/res4d stats0088/res4d stats0089/res4d stats0090/res4d
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/tdof_t1.nii.gz stats0000/tdof_t1 stats0001/tdof_t1 stats0002/tdof_t1 stats0003/tdof_t1 stats0004/tdof_t1 stats0005/tdof_t1 stats0006/tdof_t1 stats0007/tdof_t1 stats0008/tdof_t1 stats0009/tdof_t1 stats0010/tdof_t1 stats0011/tdof_t1 stats0012/tdof_t1 stats0013/tdof_t1 stats0014/tdof_t1 stats0015/tdof_t1 stats0016/tdof_t1 stats0017/tdof_t1 stats0018/tdof_t1 stats0019/tdof_t1 stats0020/tdof_t1 stats0021/tdof_t1 stats0022/tdof_t1 stats0023/tdof_t1 stats0024/tdof_t1 stats0025/tdof_t1 stats0026/tdof_t1 stats0027/tdof_t1 stats0028/tdof_t1 stats0029/tdof_t1 stats0030/tdof_t1 stats0031/tdof_t1 stats0032/tdof_t1 stats0033/tdof_t1 stats0034/tdof_t1 stats0035/tdof_t1 stats0036/tdof_t1 stats0037/tdof_t1 stats0038/tdof_t1 stats0039/tdof_t1 stats0040/tdof_t1 stats0041/tdof_t1 stats0042/tdof_t1 stats0043/tdof_t1 stats0044/tdof_t1 stats0045/tdof_t1 stats0046/tdof_t1 stats0047/tdof_t1 stats0048/tdof_t1 stats0049/tdof_t1 stats0050/tdof_t1 stats0051/tdof_t1 stats0052/tdof_t1 stats0053/tdof_t1 stats0054/tdof_t1 stats0055/tdof_t1 stats0056/tdof_t1 stats0057/tdof_t1 stats0058/tdof_t1 stats0059/tdof_t1 stats0060/tdof_t1 stats0061/tdof_t1 stats0062/tdof_t1 stats0063/tdof_t1 stats0064/tdof_t1 stats0065/tdof_t1 stats0066/tdof_t1 stats0067/tdof_t1 stats0068/tdof_t1 stats0069/tdof_t1 stats0070/tdof_t1 stats0071/tdof_t1 stats0072/tdof_t1 stats0073/tdof_t1 stats0074/tdof_t1 stats0075/tdof_t1 stats0076/tdof_t1 stats0077/tdof_t1 stats0078/tdof_t1 stats0079/tdof_t1 stats0080/tdof_t1 stats0081/tdof_t1 stats0082/tdof_t1 stats0083/tdof_t1 stats0084/tdof_t1 stats0085/tdof_t1 stats0086/tdof_t1 stats0087/tdof_t1 stats0088/tdof_t1 stats0089/tdof_t1 stats0090/tdof_t1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/tstat1.nii.gz stats0000/tstat1 stats0001/tstat1 stats0002/tstat1 stats0003/tstat1 stats0004/tstat1 stats0005/tstat1 stats0006/tstat1 stats0007/tstat1 stats0008/tstat1 stats0009/tstat1 stats0010/tstat1 stats0011/tstat1 stats0012/tstat1 stats0013/tstat1 stats0014/tstat1 stats0015/tstat1 stats0016/tstat1 stats0017/tstat1 stats0018/tstat1 stats0019/tstat1 stats0020/tstat1 stats0021/tstat1 stats0022/tstat1 stats0023/tstat1 stats0024/tstat1 stats0025/tstat1 stats0026/tstat1 stats0027/tstat1 stats0028/tstat1 stats0029/tstat1 stats0030/tstat1 stats0031/tstat1 stats0032/tstat1 stats0033/tstat1 stats0034/tstat1 stats0035/tstat1 stats0036/tstat1 stats0037/tstat1 stats0038/tstat1 stats0039/tstat1 stats0040/tstat1 stats0041/tstat1 stats0042/tstat1 stats0043/tstat1 stats0044/tstat1 stats0045/tstat1 stats0046/tstat1 stats0047/tstat1 stats0048/tstat1 stats0049/tstat1 stats0050/tstat1 stats0051/tstat1 stats0052/tstat1 stats0053/tstat1 stats0054/tstat1 stats0055/tstat1 stats0056/tstat1 stats0057/tstat1 stats0058/tstat1 stats0059/tstat1 stats0060/tstat1 stats0061/tstat1 stats0062/tstat1 stats0063/tstat1 stats0064/tstat1 stats0065/tstat1 stats0066/tstat1 stats0067/tstat1 stats0068/tstat1 stats0069/tstat1 stats0070/tstat1 stats0071/tstat1 stats0072/tstat1 stats0073/tstat1 stats0074/tstat1 stats0075/tstat1 stats0076/tstat1 stats0077/tstat1 stats0078/tstat1 stats0079/tstat1 stats0080/tstat1 stats0081/tstat1 stats0082/tstat1 stats0083/tstat1 stats0084/tstat1 stats0085/tstat1 stats0086/tstat1 stats0087/tstat1 stats0088/tstat1 stats0089/tstat1 stats0090/tstat1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/varcope1.nii.gz stats0000/varcope1 stats0001/varcope1 stats0002/varcope1 stats0003/varcope1 stats0004/varcope1 stats0005/varcope1 stats0006/varcope1 stats0007/varcope1 stats0008/varcope1 stats0009/varcope1 stats0010/varcope1 stats0011/varcope1 stats0012/varcope1 stats0013/varcope1 stats0014/varcope1 stats0015/varcope1 stats0016/varcope1 stats0017/varcope1 stats0018/varcope1 stats0019/varcope1 stats0020/varcope1 stats0021/varcope1 stats0022/varcope1 stats0023/varcope1 stats0024/varcope1 stats0025/varcope1 stats0026/varcope1 stats0027/varcope1 stats0028/varcope1 stats0029/varcope1 stats0030/varcope1 stats0031/varcope1 stats0032/varcope1 stats0033/varcope1 stats0034/varcope1 stats0035/varcope1 stats0036/varcope1 stats0037/varcope1 stats0038/varcope1 stats0039/varcope1 stats0040/varcope1 stats0041/varcope1 stats0042/varcope1 stats0043/varcope1 stats0044/varcope1 stats0045/varcope1 stats0046/varcope1 stats0047/varcope1 stats0048/varcope1 stats0049/varcope1 stats0050/varcope1 stats0051/varcope1 stats0052/varcope1 stats0053/varcope1 stats0054/varcope1 stats0055/varcope1 stats0056/varcope1 stats0057/varcope1 stats0058/varcope1 stats0059/varcope1 stats0060/varcope1 stats0061/varcope1 stats0062/varcope1 stats0063/varcope1 stats0064/varcope1 stats0065/varcope1 stats0066/varcope1 stats0067/varcope1 stats0068/varcope1 stats0069/varcope1 stats0070/varcope1 stats0071/varcope1 stats0072/varcope1 stats0073/varcope1 stats0074/varcope1 stats0075/varcope1 stats0076/varcope1 stats0077/varcope1 stats0078/varcope1 stats0079/varcope1 stats0080/varcope1 stats0081/varcope1 stats0082/varcope1 stats0083/varcope1 stats0084/varcope1 stats0085/varcope1 stats0086/varcope1 stats0087/varcope1 stats0088/varcope1 stats0089/varcope1 stats0090/varcope1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/weights1.nii.gz stats0000/weights1 stats0001/weights1 stats0002/weights1 stats0003/weights1 stats0004/weights1 stats0005/weights1 stats0006/weights1 stats0007/weights1 stats0008/weights1 stats0009/weights1 stats0010/weights1 stats0011/weights1 stats0012/weights1 stats0013/weights1 stats0014/weights1 stats0015/weights1 stats0016/weights1 stats0017/weights1 stats0018/weights1 stats0019/weights1 stats0020/weights1 stats0021/weights1 stats0022/weights1 stats0023/weights1 stats0024/weights1 stats0025/weights1 stats0026/weights1 stats0027/weights1 stats0028/weights1 stats0029/weights1 stats0030/weights1 stats0031/weights1 stats0032/weights1 stats0033/weights1 stats0034/weights1 stats0035/weights1 stats0036/weights1 stats0037/weights1 stats0038/weights1 stats0039/weights1 stats0040/weights1 stats0041/weights1 stats0042/weights1 stats0043/weights1 stats0044/weights1 stats0045/weights1 stats0046/weights1 stats0047/weights1 stats0048/weights1 stats0049/weights1 stats0050/weights1 stats0051/weights1 stats0052/weights1 stats0053/weights1 stats0054/weights1 stats0055/weights1 stats0056/weights1 stats0057/weights1 stats0058/weights1 stats0059/weights1 stats0060/weights1 stats0061/weights1 stats0062/weights1 stats0063/weights1 stats0064/weights1 stats0065/weights1 stats0066/weights1 stats0067/weights1 stats0068/weights1 stats0069/weights1 stats0070/weights1 stats0071/weights1 stats0072/weights1 stats0073/weights1 stats0074/weights1 stats0075/weights1 stats0076/weights1 stats0077/weights1 stats0078/weights1 stats0079/weights1 stats0080/weights1 stats0081/weights1 stats0082/weights1 stats0083/weights1 stats0084/weights1 stats0085/weights1 stats0086/weights1 stats0087/weights1 stats0088/weights1 stats0089/weights1 stats0090/weights1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/zflame1lowertstat1.nii.gz stats0000/zflame1lowertstat1 stats0001/zflame1lowertstat1 stats0002/zflame1lowertstat1 stats0003/zflame1lowertstat1 stats0004/zflame1lowertstat1 stats0005/zflame1lowertstat1 stats0006/zflame1lowertstat1 stats0007/zflame1lowertstat1 stats0008/zflame1lowertstat1 stats0009/zflame1lowertstat1 stats0010/zflame1lowertstat1 stats0011/zflame1lowertstat1 stats0012/zflame1lowertstat1 stats0013/zflame1lowertstat1 stats0014/zflame1lowertstat1 stats0015/zflame1lowertstat1 stats0016/zflame1lowertstat1 stats0017/zflame1lowertstat1 stats0018/zflame1lowertstat1 stats0019/zflame1lowertstat1 stats0020/zflame1lowertstat1 stats0021/zflame1lowertstat1 stats0022/zflame1lowertstat1 stats0023/zflame1lowertstat1 stats0024/zflame1lowertstat1 stats0025/zflame1lowertstat1 stats0026/zflame1lowertstat1 stats0027/zflame1lowertstat1 stats0028/zflame1lowertstat1 stats0029/zflame1lowertstat1 stats0030/zflame1lowertstat1 stats0031/zflame1lowertstat1 stats0032/zflame1lowertstat1 stats0033/zflame1lowertstat1 stats0034/zflame1lowertstat1 stats0035/zflame1lowertstat1 stats0036/zflame1lowertstat1 stats0037/zflame1lowertstat1 stats0038/zflame1lowertstat1 stats0039/zflame1lowertstat1 stats0040/zflame1lowertstat1 stats0041/zflame1lowertstat1 stats0042/zflame1lowertstat1 stats0043/zflame1lowertstat1 stats0044/zflame1lowertstat1 stats0045/zflame1lowertstat1 stats0046/zflame1lowertstat1 stats0047/zflame1lowertstat1 stats0048/zflame1lowertstat1 stats0049/zflame1lowertstat1 stats0050/zflame1lowertstat1 stats0051/zflame1lowertstat1 stats0052/zflame1lowertstat1 stats0053/zflame1lowertstat1 stats0054/zflame1lowertstat1 stats0055/zflame1lowertstat1 stats0056/zflame1lowertstat1 stats0057/zflame1lowertstat1 stats0058/zflame1lowertstat1 stats0059/zflame1lowertstat1 stats0060/zflame1lowertstat1 stats0061/zflame1lowertstat1 stats0062/zflame1lowertstat1 stats0063/zflame1lowertstat1 stats0064/zflame1lowertstat1 stats0065/zflame1lowertstat1 stats0066/zflame1lowertstat1 stats0067/zflame1lowertstat1 stats0068/zflame1lowertstat1 stats0069/zflame1lowertstat1 stats0070/zflame1lowertstat1 stats0071/zflame1lowertstat1 stats0072/zflame1lowertstat1 stats0073/zflame1lowertstat1 stats0074/zflame1lowertstat1 stats0075/zflame1lowertstat1 stats0076/zflame1lowertstat1 stats0077/zflame1lowertstat1 stats0078/zflame1lowertstat1 stats0079/zflame1lowertstat1 stats0080/zflame1lowertstat1 stats0081/zflame1lowertstat1 stats0082/zflame1lowertstat1 stats0083/zflame1lowertstat1 stats0084/zflame1lowertstat1 stats0085/zflame1lowertstat1 stats0086/zflame1lowertstat1 stats0087/zflame1lowertstat1 stats0088/zflame1lowertstat1 stats0089/zflame1lowertstat1 stats0090/zflame1lowertstat1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/zflame1uppertstat1.nii.gz stats0000/zflame1uppertstat1 stats0001/zflame1uppertstat1 stats0002/zflame1uppertstat1 stats0003/zflame1uppertstat1 stats0004/zflame1uppertstat1 stats0005/zflame1uppertstat1 stats0006/zflame1uppertstat1 stats0007/zflame1uppertstat1 stats0008/zflame1uppertstat1 stats0009/zflame1uppertstat1 stats0010/zflame1uppertstat1 stats0011/zflame1uppertstat1 stats0012/zflame1uppertstat1 stats0013/zflame1uppertstat1 stats0014/zflame1uppertstat1 stats0015/zflame1uppertstat1 stats0016/zflame1uppertstat1 stats0017/zflame1uppertstat1 stats0018/zflame1uppertstat1 stats0019/zflame1uppertstat1 stats0020/zflame1uppertstat1 stats0021/zflame1uppertstat1 stats0022/zflame1uppertstat1 stats0023/zflame1uppertstat1 stats0024/zflame1uppertstat1 stats0025/zflame1uppertstat1 stats0026/zflame1uppertstat1 stats0027/zflame1uppertstat1 stats0028/zflame1uppertstat1 stats0029/zflame1uppertstat1 stats0030/zflame1uppertstat1 stats0031/zflame1uppertstat1 stats0032/zflame1uppertstat1 stats0033/zflame1uppertstat1 stats0034/zflame1uppertstat1 stats0035/zflame1uppertstat1 stats0036/zflame1uppertstat1 stats0037/zflame1uppertstat1 stats0038/zflame1uppertstat1 stats0039/zflame1uppertstat1 stats0040/zflame1uppertstat1 stats0041/zflame1uppertstat1 stats0042/zflame1uppertstat1 stats0043/zflame1uppertstat1 stats0044/zflame1uppertstat1 stats0045/zflame1uppertstat1 stats0046/zflame1uppertstat1 stats0047/zflame1uppertstat1 stats0048/zflame1uppertstat1 stats0049/zflame1uppertstat1 stats0050/zflame1uppertstat1 stats0051/zflame1uppertstat1 stats0052/zflame1uppertstat1 stats0053/zflame1uppertstat1 stats0054/zflame1uppertstat1 stats0055/zflame1uppertstat1 stats0056/zflame1uppertstat1 stats0057/zflame1uppertstat1 stats0058/zflame1uppertstat1 stats0059/zflame1uppertstat1 stats0060/zflame1uppertstat1 stats0061/zflame1uppertstat1 stats0062/zflame1uppertstat1 stats0063/zflame1uppertstat1 stats0064/zflame1uppertstat1 stats0065/zflame1uppertstat1 stats0066/zflame1uppertstat1 stats0067/zflame1uppertstat1 stats0068/zflame1uppertstat1 stats0069/zflame1uppertstat1 stats0070/zflame1uppertstat1 stats0071/zflame1uppertstat1 stats0072/zflame1uppertstat1 stats0073/zflame1uppertstat1 stats0074/zflame1uppertstat1 stats0075/zflame1uppertstat1 stats0076/zflame1uppertstat1 stats0077/zflame1uppertstat1 stats0078/zflame1uppertstat1 stats0079/zflame1uppertstat1 stats0080/zflame1uppertstat1 stats0081/zflame1uppertstat1 stats0082/zflame1uppertstat1 stats0083/zflame1uppertstat1 stats0084/zflame1uppertstat1 stats0085/zflame1uppertstat1 stats0086/zflame1uppertstat1 stats0087/zflame1uppertstat1 stats0088/zflame1uppertstat1 stats0089/zflame1uppertstat1 stats0090/zflame1uppertstat1
+
+/Users/katy/fsl/bin/fslmerge -z stats0000/zstat1.nii.gz stats0000/zstat1 stats0001/zstat1 stats0002/zstat1 stats0003/zstat1 stats0004/zstat1 stats0005/zstat1 stats0006/zstat1 stats0007/zstat1 stats0008/zstat1 stats0009/zstat1 stats0010/zstat1 stats0011/zstat1 stats0012/zstat1 stats0013/zstat1 stats0014/zstat1 stats0015/zstat1 stats0016/zstat1 stats0017/zstat1 stats0018/zstat1 stats0019/zstat1 stats0020/zstat1 stats0021/zstat1 stats0022/zstat1 stats0023/zstat1 stats0024/zstat1 stats0025/zstat1 stats0026/zstat1 stats0027/zstat1 stats0028/zstat1 stats0029/zstat1 stats0030/zstat1 stats0031/zstat1 stats0032/zstat1 stats0033/zstat1 stats0034/zstat1 stats0035/zstat1 stats0036/zstat1 stats0037/zstat1 stats0038/zstat1 stats0039/zstat1 stats0040/zstat1 stats0041/zstat1 stats0042/zstat1 stats0043/zstat1 stats0044/zstat1 stats0045/zstat1 stats0046/zstat1 stats0047/zstat1 stats0048/zstat1 stats0049/zstat1 stats0050/zstat1 stats0051/zstat1 stats0052/zstat1 stats0053/zstat1 stats0054/zstat1 stats0055/zstat1 stats0056/zstat1 stats0057/zstat1 stats0058/zstat1 stats0059/zstat1 stats0060/zstat1 stats0061/zstat1 stats0062/zstat1 stats0063/zstat1 stats0064/zstat1 stats0065/zstat1 stats0066/zstat1 stats0067/zstat1 stats0068/zstat1 stats0069/zstat1 stats0070/zstat1 stats0071/zstat1 stats0072/zstat1 stats0073/zstat1 stats0074/zstat1 stats0075/zstat1 stats0076/zstat1 stats0077/zstat1 stats0078/zstat1 stats0079/zstat1 stats0080/zstat1 stats0081/zstat1 stats0082/zstat1 stats0083/zstat1 stats0084/zstat1 stats0085/zstat1 stats0086/zstat1 stats0087/zstat1 stats0088/zstat1 stats0089/zstat1 stats0090/zstat1
+
+/bin/mv stats0000 stats ; /bin/rm -rf stats?* tmp*
+
+/bin/rm -f stats/zem* stats/zols* stats/mask* ; /bin/mv dof stats
+
+/Users/katy/fsl/bin/smoothest -d 22 -m mask -r stats/res4d > stats/smoothness
+</pre><hr>Post-stats<br><pre>
+
+/Users/katy/fsl/bin/fslmaths stats/zstat1 -mas mask thresh_zstat1
+
+echo 247058 > thresh_zstat1.vol
+zstat1: DLH=0.0568261 VOLUME=247058 RESELS=82.9429
+
+/Users/katy/fsl/bin/fsl-cluster -i thresh_zstat1 -t 2.3 --othresh=thresh_zstat1 -o cluster_mask_zstat1 --connectivity=26 --mm --olmax=lmax_zstat1_std.txt --scalarname=Z -p 0.05 -d 0.0568261 --volume=247058 -c stats/cope1 > cluster_zstat1_std.txt
+
+/Users/katy/fsl/bin/cluster2html . cluster_zstat1 -std
+
+/Users/katy/fsl/bin/fslstats thresh_zstat1 -l 0.0001 -R 2>/dev/null
+2.300189 5.080569 
+Rendering using zmin=2.300189 zmax=5.080569
+
+/Users/katy/fsl/bin/overlay 1 0 example_func -a thresh_zstat1 2.300189 5.080569 rendered_thresh_zstat1
+
+/Users/katy/fsl/bin/slicer rendered_thresh_zstat1 -S 2 750 rendered_thresh_zstat1.png
+
+/bin/cp /Users/katy/fsl/etc/luts/ramp.gif .ramp.gif
+
+mkdir -p tsplot ; /Users/katy/fsl/bin/tsplot . -f filtered_func_data -o tsplot
+</pre><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></BODY></HTML>

@@ -3,13 +3,24 @@
 Created by:
 Rheka Narwastu, Paige Pagaduan, Katrina Suherman
 
-This repository contains a reproducible neuroimaging analysis pipeline investigating **how individual differences in intelligence quotient (IQ) relate to auditory cortex activation in individuals with schizophrenia**. The analysis is performed using FSL FEAT group-level fMRI modeling and includes covariate control for age and sex.
+This repository contains a reproducible neuroimaging analysis pipeline investigating **how individual differences in intelligence quotient (IQ) relate to auditory cortex activation in individuals with schizophrenia**.
 
-The study compares three participant groups:
+Example outputs from the analysis pipeline are included in this repository within the folders `second_level_output/` and `ROI_analysis_output/`, demonstrating the expected structure of generated results.
 
-- **AVH+**: schizophrenia patients experiencing auditory verbal hallucinations  
-- **AVH−**: schizophrenia patients without recent auditory hallucinations  
-- **HC**: healthy control participants  
+## Introduction
+
+Schizophrenia is a chronic psychiatric disorder that affects approximately 1% of the global population and is often associated with difficulties in speech perception. These difficulties have been linked to altered activation in the auditory cortex, a brain region responsible for processing auditory information. In addition to auditory regions, higher cognitive processing has also been associated with cerebellar regions such as right Crus I.
+
+Previous neuroimaging studies investigating speech perception in schizophrenia have frequently focused on symptom groups, particularly the presence or absence of auditory verbal hallucinations (AVH). However, hallucination status alone may not fully explain variability in speech related brain responses. Differences in cognitive ability, such as intelligence quotient (IQ), may also contribute to variation in neural activation during speech processing.
+
+This project investigates whether individual differences in IQ are associated with brain activation during speech perception. Using an openly available functional magnetic resonance imaging (fMRI) dataset from OpenNeuro, we analyze neural responses to spoken words, spoken sentences, and reversed speech in three participant groups: healthy controls (HC), schizophrenia patients without hallucinations (AVH−), and schizophrenia patients with hallucinations (AVH+).
+
+The analysis focuses on two regions of interest:
+
+- **Auditory cortex**, which processes speech sounds  
+- **Right Crus I**, a cerebellar region linked to higher cognitive processing
+
+The goal of this study is to examine whether variability in speech related brain activation may be associated with differences in cognitive ability rather than hallucination status alone.
 
 
 ## Analysis Overview
@@ -73,6 +84,23 @@ All analyses are performed in standard MNI space.
 * `task_white-noise_events.txt` — timing file for white noise condition
 
 ---
+
+#### `second_level_output/`
+
+Contains the group level FEAT results generated from the second level analysis.  
+Each `.gfeat` directory includes statistical maps, cluster reports, and FEAT summary files.
+
+---
+
+#### `ROI_analysis_output/`
+
+Contains outputs generated during ROI analysis, including extracted activation values and plots showing the relationship between IQ and brain activation.
+
+This folder includes:
+
+- CSV files containing ROI activation values
+- Merged datasets combining activation and participant information
+- Generated figures visualizing IQ–activation relationships
 
 ## Requirements
 
@@ -731,6 +759,27 @@ These figures are suitable for inclusion in reports and presentations.
 
 ---
 
+## Discussion
+
+Second level analysis shows that both schizophrenia groups (AVH+ and AVH−) exhibit strong activation in the auditory cortex during speech perception, with similar spatial activation patterns across groups.
+
+ROI analysis found no significant relationship between IQ and auditory cortex activation. However, significant associations were observed in the cerebellar region right Crus I during the Words contrast. Higher IQ was associated with lower activation in the AVH+ group and higher activation in the AVH− group.
+
+These findings suggest that cerebellar regions such as right Crus I may reflect individual differences in the cognitive processing of speech.
+
+## Limitations and Future Work
+
+This analysis is limited by the available dataset, which includes only a small set of participant variables (age, sex, IQ, and diagnostic group). Additional demographic or clinical variables could help account for potential confounding factors affecting brain activation.
+
+Future work could include larger participant samples to improve statistical power and better assess group level trends. Incorporating additional cognitive assessments may also allow investigation of brain regions involved in broader cognitive processes beyond auditory and language related functions.
+
+## Conclusion
+
+This study examined the relationship between IQ and brain activation during speech perception across healthy controls and schizophrenia groups. Auditory cortex activation was consistent across groups, with no significant association between IQ and auditory cortex activity.
+
+However, significant IQ related effects were observed in the cerebellar region right Crus I during the Words contrast in both schizophrenia groups, with opposite directions of association. These findings suggest that cerebellar regions may reflect individual differences in the cognitive processing of speech.
+
+---
 ## Citation
 
 > Soler-Vidal, J., et al. (2022). *Brain correlates of speech perception in schizophrenia patients with and without auditory hallucinations*. **PLOS ONE**.

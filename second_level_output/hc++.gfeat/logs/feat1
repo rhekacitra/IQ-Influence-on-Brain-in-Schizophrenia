@@ -1,0 +1,102 @@
+
+/bin/cp /Users/katy/desktop/testing_reproc/second_level/tmp_design_HC_01_25_XXXXXX.fsf design.fsf
+
+/Users/katy/fsl/bin/feat_model design
+
+mkdir .files;cp /Users/katy/fsl/doc/fsl.css .files;cp -r /Users/katy/fsl/doc/images .files/images
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat2_pre   /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat -gfeatprep
+70405
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -I 1 -flame1
+74692
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 74692 -t ./.flame
+75233
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 75233  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -flame3
+75526
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 75526  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -poststats 1
+75642
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 75642  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope1.feat -stop
+76167
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -I 2 -flame1
+76426
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 76426 -t ./.flame
+76943
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 76943  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -flame3
+77241
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 77241  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -poststats 1
+77356
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 77356  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope2.feat -stop
+77887
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -I 3 -flame1
+78153
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 78153 -t ./.flame
+78676
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 78676  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -flame3
+78964
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 78964  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -poststats 1
+79085
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 79085  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope3.feat -stop
+79610
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -I 4 -flame1
+79871
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 79871 -t ./.flame
+80389
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 80389  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -flame3
+80681
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 80681  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -poststats 1
+80797
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 80797  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope4.feat -stop
+81321
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -I 5 -flame1
+81580
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 81580 -t ./.flame
+82098
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 82098  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -flame3
+82388
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 82388  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -poststats 1
+82503
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 82503  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope5.feat -stop
+83028
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3a_flame -j 70405  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -I 6 -flame1
+83287
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3b_flame -j 83287 -t ./.flame
+83805
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat3c_flame -j 83805  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -flame3
+84098
+
+/Users/katy/fsl/bin/fsl_sub -T 60 -l logs -N feat4_post -j 84098  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -poststats 1
+84213
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 84213  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat -stop
+84739
+
+/Users/katy/fsl/bin/fsl_sub -T 1 -l logs -N feat5_stop -j 76167,77887,79610,81321,83028,84739  /Users/katy/fsl/bin/feat /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat/cope6.feat/design.fsf -D /Users/katy/Desktop/testing_reproc/second_level_output/hc++.gfeat -stop
+84874
