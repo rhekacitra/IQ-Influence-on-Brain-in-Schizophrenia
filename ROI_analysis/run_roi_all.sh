@@ -15,6 +15,7 @@ cope_name() {
     1) echo "sentences" ;;
     3) echo "words" ;;
     5) echo "reversed" ;;
+    *) echo "unknown" ;;
   esac
 }
 
@@ -34,9 +35,9 @@ for MASK_FILE in "${MASKS[@]}"; do
 
   echo "Processing mask: $MASK_FILE"
 
-# ----------------------------
-# Extract ROI means
-# ----------------------------
+  # ----------------------------
+  # Part 1: Extract ROI means
+  # ----------------------------
   for cope in "${COPES[@]}"; do
     label=$(cope_name "$cope")
     out="${OUT_FILES}/roi_activation_${REGION_NAME}_${label}.csv"
@@ -58,10 +59,11 @@ for MASK_FILE in "${MASKS[@]}"; do
     echo "Wrote $out"
   done
 
-# ----------------------------
-# Part 2: Merge with participants.tsv
-# ----------------------------
-python3 - << PY
+  # ----------------------------
+  # Part 2: Merge with participants.tsv
+  # and impute missing IQ values with 100
+  # ----------------------------
+  python3 - << PY
 import os
 import pandas as pd
 
@@ -77,6 +79,10 @@ cope_map = {
 }
 
 participants = pd.read_csv(participants_tsv, sep="\\t")
+
+# Convert IQ to numeric and impute missing values with 100
+participants["iq"] = pd.to_numeric(participants["iq"], errors="coerce")
+participants["iq"] = participants["iq"].fillna(100)
 
 for cope in copes:
     label = cope_map[cope]

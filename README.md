@@ -568,6 +568,7 @@ The script will:
 1. Extract mean activation values from each ROI
 2. Save ROI activation values for each subject
 3. Merge activation values with participant information
+4. Impute missing IQ values with the dataset mean (IQ = 100) within `run_roi_all.sh` before merging, allowing all participants to be included in the IQ–activation analysis.
 
 ---
 
