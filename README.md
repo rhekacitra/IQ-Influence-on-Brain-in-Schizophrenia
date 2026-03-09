@@ -7,6 +7,10 @@ This repository provides a reproducible neuroimaging analysis pipeline examining
 
 Example outputs from the analysis pipeline are included in this repository within the folders `second_level_output/` and `ROI_analysis_output/`, demonstrating the expected structure of generated results.
 
+<p align="center">
+  <img src="ROI_analysis_output/auditory_cortex/plots/iq_vs_auditory_cortex_reversed.png" width="500">
+</p>
+
 ## Introduction
 
 Schizophrenia affects about 1% of the population and is often associated with difficulties in speech perception. These impairments have been linked to altered activation in the auditory cortex, while higher cognitive processes have also been associated with cerebellar regions such as right Crus I.
@@ -32,7 +36,7 @@ The analysis consists of the following steps:
    Statistical modeling is performed to compare activation patterns across participant groups (AVH+, AVH−, and HC).
 
 4. **ROI analysis**
-   Mean activation values are extracted from the selected auditory cortex region of interest using the subject level contrast images.
+   Mean activation values are extracted from the selected region of interest using the subject level contrast images.
 
 5. **Visualization of IQ–activation relationships**
    Activation values from the region of interest are combined with behavioral data to visualize and analyze the relationship between IQ and neural activation.
@@ -151,12 +155,12 @@ your_data_folder/
 └── ...
 ```
 
-**IF YOU ARE CLONING THE DATA FROM THE GIT REPOSITORY ON OPENNEURO:**
+**If you are cloning the data from the Git Repository on OpenNeuro:**
 
 1. Install DataLad on your device.
 2. Navigate to the cloned dataset and run:
 
-```bash
+```
 datalad get .
 ```
 
